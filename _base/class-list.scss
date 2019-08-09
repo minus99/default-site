@@ -1,0 +1,72 @@
+/**************** ****************
+    
+Site General Flex Class Items
+    
+***************** ****************/
+.display-flex{
+    display: flex;  
+}
+.justify-center{
+    justify-content: center;
+}
+.justify-start{
+    justify-content: flex-start;
+}
+.justify-end{
+    justify-content: flex-end;
+}
+.justify-between{
+    justify-content: space-between;
+}
+.align-items-center{
+    align-items: center;
+}
+.align-items-start{
+    align-items: flex-start;
+}
+.align-items-end{
+    align-items: flex-end;
+}
+
+/*Default Flex Order List*/
+.order{
+    &-1{    
+        order: 1;
+    }
+    &-2{
+        order: 2;
+    }
+    &-3{
+        order: 3;
+    }
+    &-4{
+        order: 4;
+    }
+    &-5{
+        order: 5;
+    }
+}
+
+/**************** ****************
+    
+Site General Grid Class Items
+    
+***************** ****************/
+.display-grid{
+    display: grid;
+}
+.ga1{
+    grid-area:AAA;
+}
+.ga2{
+    grid-area:BBB;
+}
+.ga3{
+    grid-area:CCC;
+}
+.ga4{
+    grid-area:DDD;
+}
+.ga5{
+    grid-area:EEE;
+}

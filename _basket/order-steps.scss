@@ -1,0 +1,45 @@
+/*Basket Page Header Element Sorting*/
+.header-basket{
+    > div{
+        flex-wrap: wrap;
+    }
+    .logo{
+        @extend .order-1;
+    }
+    .member{
+        @extend .order-2;
+    }
+    .steps{
+        @extend .order-3;
+        width: $fullWidth;
+    }
+}
+
+//Order Steps
+.tabloTabBtnAdim{
+    > tbody > tr > td{
+        display: table;
+        width: $fullWidth;
+    }
+    .tabBtnAdimDefault,
+    .tabBtnSelectedDefault{
+        width: 33.333%;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        > a{
+            display: block;
+        }
+    }
+    .icon {
+        display: block;
+        margin-left: $mLeftAuto;
+        margin-right: $mRightAuto;
+    }
+}
+
+//Order Steps Link Text Class
+.order-step-txt{
+    font-family: $regular;
+    color: $order-step-text-color;
+}

@@ -1,0 +1,151 @@
+/*Full Width Element*/
+/*Width Auto Element*/
+/*Margin Left Auto Element*/
+/*Margin Left Auto Element*/
+/*Site Default Colors*/
+[class*="icon-"], .icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+  vertical-align: middle;
+  font-size: 32px; }
+
+/**************** ****************
+    
+Site General Flex Class Items
+    
+***************** ****************/
+.display-flex {
+  display: flex; }
+
+.justify-center {
+  justify-content: center; }
+
+.justify-start {
+  justify-content: flex-start; }
+
+.justify-end {
+  justify-content: flex-end; }
+
+.justify-between {
+  justify-content: space-between; }
+
+.align-items-center {
+  align-items: center; }
+
+.align-items-start {
+  align-items: flex-start; }
+
+.align-items-end {
+  align-items: flex-end; }
+
+/*Default Flex Order List*/
+.order-1, .header-basket .logo {
+  order: 1; }
+
+.order-2, .header-basket .member {
+  order: 2; }
+
+.order-3, .header-basket .steps {
+  order: 3; }
+
+.order-4 {
+  order: 4; }
+
+.order-5 {
+  order: 5; }
+
+/**************** ****************
+    
+Site General Grid Class Items
+    
+***************** ****************/
+.display-grid {
+  display: grid; }
+
+.ga1 {
+  grid-area: AAA; }
+
+.ga2 {
+  grid-area: BBB; }
+
+.ga3 {
+  grid-area: CCC; }
+
+.ga4 {
+  grid-area: DDD; }
+
+.ga5 {
+  grid-area: EEE; }
+
+/*Site Header Grid*/
+.header {
+  background: #202020;
+  min-height: 50px; }
+
+/*Basket Page General Header Hidden*/
+.order-steps .header-site {
+  display: none; }
+
+.member-login-txt {
+  font-family: "maison_neuemedium";
+  color: #ffffff; }
+
+/*Basket Page Header Element Sorting*/
+.header-basket > div {
+  flex-wrap: wrap; }
+
+.header-basket .steps {
+  width: 100%; }
+
+.tabloTabBtnAdim > tbody > tr > td {
+  display: table;
+  width: 100%; }
+
+.tabloTabBtnAdim .tabBtnAdimDefault,
+.tabloTabBtnAdim .tabBtnSelectedDefault {
+  width: 33.333%;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center; }
+  .tabloTabBtnAdim .tabBtnAdimDefault > a,
+  .tabloTabBtnAdim .tabBtnSelectedDefault > a {
+    display: block; }
+
+.tabloTabBtnAdim .icon {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.order-step-txt {
+  font-family: "maison_neuebook";
+  color: #ffffff; }
+
+/*Site General Page Height */
+.page {
+  height: 100%; }
+
+/*Basket Page Background Color*/
+.page-basket {
+  background: #f3f3f7; }
+
+@supports (grid-area: auto) {
+  @media screen and (min-width: 1024px) {
+    /*Basket Page Header Element Sorting*/
+    .header-basket > div {
+      flex-wrap: inherit; }
+    .header-basket .member {
+      order: 3; }
+    .header-basket .steps {
+      order: 2;
+      max-width: 500px; }
+    /*Site Desktop Container (max-width)*/
+    .container-width {
+      width: calc(100% - 100px);
+      margin-left: auto;
+      margin-right: auto; } } }
+
+/*# sourceMappingURL=genel.css.map */

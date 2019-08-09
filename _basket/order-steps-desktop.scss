@@ -1,0 +1,13 @@
+/*Basket Page Header Element Sorting*/
+.header-basket{
+    > div{
+        flex-wrap: inherit;
+    }
+    .member{
+        order: 3;
+    }
+    .steps{
+        order: 2;
+        max-width: 500px;
+    }
+}

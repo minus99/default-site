@@ -1,0 +1,30 @@
+//-----Base-----//
+@import '_base/variables';
+@import '_app-shell/first-loading';
+
+//-----Header-----//
+@import '_header/grid';
+@import '_basket/header';
+
+//-----Content-----//
+@import '_content-grid/main';
+
+//-----Basket-----//
+@import '_basket/main';
+
+
+//-----Desktop Media Query-----//
+@supports(grid-area: auto) {
+    @media screen and (min-width: $breakpoint-default) {
+
+        //-----Header-----//
+        @import '_header/grid-desktop';
+        @import '_basket/header-desktop';
+        
+        //-----Basket-----//
+        @import '_basket/main-desktop';
+        
+        //-----Content-----//
+        @import '_content-grid/main-desktop';
+    }
+}
