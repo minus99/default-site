@@ -3,6 +3,16 @@
 /*Margin Left Auto Element*/
 /*Margin Left Auto Element*/
 /*Site Default Colors*/
+/*Border Radius*/
+/*Hidden Mobile Element*/
+.visible\@d {
+  display: none !important; }
+
+/*Visible Desktop Element*/
+@media (min-width: 1024px) {
+  .visible\@d {
+    display: inherit !important; } }
+
 [class*="icon-"], .icon {
   display: inline-block;
   width: 1em;
@@ -49,7 +59,7 @@ Site General Flex Class Items
 .order-2, .header-basket .member {
   order: 2; }
 
-.order-3, .header-basket .steps {
+.order-3 {
   order: 3; }
 
 .order-4 {
@@ -86,23 +96,17 @@ Site General Grid Class Items
   background: #202020;
   min-height: 50px; }
 
-/*Basket Page General Header Hidden*/
 .order-steps .header-site {
   display: none; }
 
 .member-login-txt {
   font-family: "maison_neuemedium";
-  color: #ffffff; }
-
-/*Basket Page Header Element Sorting*/
-.header-basket > div {
-  flex-wrap: wrap; }
-
-.header-basket .steps {
-  width: 100%; }
+  color: #ffffff;
+  margin-right: 5px; }
 
 .tabloTabBtnAdim > tbody > tr > td {
   display: table;
+  table-layout: fixed;
   width: 100%; }
 
 .tabloTabBtnAdim .tabBtnAdimDefault,
@@ -110,19 +114,44 @@ Site General Grid Class Items
   width: 33.333%;
   display: table-cell;
   vertical-align: middle;
-  text-align: center; }
+  text-align: center;
+  position: relative; }
   .tabloTabBtnAdim .tabBtnAdimDefault > a,
   .tabloTabBtnAdim .tabBtnSelectedDefault > a {
     display: block; }
+  .tabloTabBtnAdim .tabBtnAdimDefault:after,
+  .tabloTabBtnAdim .tabBtnSelectedDefault:after {
+    content: '';
+    display: block;
+    width: 4px;
+    height: 4px;
+    background: none;
+    border-radius: 100%;
+    margin-left: auto;
+    margin-top: 3px;
+    margin-right: auto; }
+  .tabloTabBtnAdim .tabBtnAdimDefault .icon,
+  .tabloTabBtnAdim .tabBtnSelectedDefault .icon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    color: #202020;
+    fill-opacity: .4; }
+  .tabloTabBtnAdim .tabBtnAdimDefault .step-txt,
+  .tabloTabBtnAdim .tabBtnSelectedDefault .step-txt {
+    font-family: "maison_neuebook";
+    color: #202020;
+    opacity: .4;
+    font-size: 14px; }
 
-.tabloTabBtnAdim .icon {
-  display: block;
-  margin-left: auto;
-  margin-right: auto; }
+.tabloTabBtnAdim .tabBtnSelectedDefault .icon {
+  fill-opacity: inherit; }
 
-.order-step-txt {
-  font-family: "maison_neuebook";
-  color: #ffffff; }
+.tabloTabBtnAdim .tabBtnSelectedDefault .step-txt {
+  color: #202020; }
+
+.tabloTabBtnAdim .tabBtnSelectedDefault:after {
+  background: #3d5deb; }
 
 /*Site General Page Height */
 .page {
@@ -134,14 +163,23 @@ Site General Grid Class Items
 
 @supports (grid-area: auto) {
   @media screen and (min-width: 1024px) {
-    /*Basket Page Header Element Sorting*/
-    .header-basket > div {
-      flex-wrap: inherit; }
-    .header-basket .member {
-      order: 3; }
-    .header-basket .steps {
-      order: 2;
-      max-width: 500px; }
+    .basket-steps {
+      max-width: 500px;
+      margin-left: auto;
+      margin-top: -80px;
+      margin-right: auto;
+      min-height: 80px; }
+    .tabloTabBtnAdim > tbody > tr > td {
+      min-height: 80px; }
+    .tabloTabBtnAdim .tabBtnAdimDefault:after,
+    .tabloTabBtnAdim .tabBtnSelectedDefault:after {
+      width: 6px;
+      height: 6px; }
+    .tabloTabBtnAdim .tabBtnAdimDefault .step-txt {
+      color: #ffffff; }
+    .tabloTabBtnAdim .tabBtnSelectedDefault .step-txt {
+      color: #ffffff;
+      opacity: inherit; }
     /*Site Desktop Container (max-width)*/
     .container-width {
       width: calc(100% - 100px);

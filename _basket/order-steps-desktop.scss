@@ -1,13 +1,32 @@
-/*Basket Page Header Element Sorting*/
-.header-basket{
-    > div{
-        flex-wrap: inherit;
+.basket-steps{
+    max-width: 500px;
+    margin-left: $mLeftAuto;
+    margin-top: -80px;
+    margin-right: $mRightAuto;
+    min-height: 80px;
+}
+
+//Order Steps
+.tabloTabBtnAdim{
+    > tbody > tr > td{
+        min-height: 80px;
     }
-    .member{
-        order: 3;
+    .tabBtnAdimDefault,
+    .tabBtnSelectedDefault{
+        &:after{
+            width: 6px;
+            height: 6px;
+        }
     }
-    .steps{
-        order: 2;
-        max-width: 500px;
+    .tabBtnAdimDefault{
+        .step-txt{
+            color: $colorWhite;
+        }
+    }
+    .tabBtnSelectedDefault{
+        .step-txt{
+            color: $colorWhite;
+            opacity: inherit;
+        }
     }
 }

@@ -3,6 +3,9 @@ $regular: 'maison_neuebook';
 $medium: 'maison_neuemedium';
 $bold: 'maison_neuedemibold';
 
+//Site Default Font Size
+$siteFontSize: 14px;
+
 //Site Desktop Breakpoint
 $breakpoint-default: 1024px;
 
@@ -53,3 +56,14 @@ $mRightAuto: auto;
 
 /*Site Default Colors*/
 $colorWhite: #ffffff;
+
+/*Border Radius*/
+$borderRadius: 100%;
+
+/*Hidden Mobile Element*/
+.visible\@d { display: none !important; }
+
+ /*Visible Desktop Element*/
+ @media (min-width: $breakpoint-default) {
+    .visible\@d { display: inherit !important; }
+ }

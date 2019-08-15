@@ -1,9 +1,23 @@
-/*Basket Page General Header Hidden*/
+//Basket Page General Header Hidden
 .order-steps{
-    .header-site{display: none;}
+    .header-site{
+        display: none;
+    }
 }
 
+//Basket Page Header 
+.header-basket{
+    .logo{
+        @extend .order-1;
+    }
+    .member{
+        @extend .order-2;
+    }
+}
+
+//Basket Page Member Link Text
 .member-login-txt{
     font-family: $medium;
     color: $colorWhite;
+    margin-right: 5px;
 }

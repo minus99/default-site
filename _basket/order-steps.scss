@@ -1,24 +1,8 @@
-/*Basket Page Header Element Sorting*/
-.header-basket{
-    > div{
-        flex-wrap: wrap;
-    }
-    .logo{
-        @extend .order-1;
-    }
-    .member{
-        @extend .order-2;
-    }
-    .steps{
-        @extend .order-3;
-        width: $fullWidth;
-    }
-}
-
 //Order Steps
 .tabloTabBtnAdim{
     > tbody > tr > td{
         display: table;
+        table-layout: fixed;
         width: $fullWidth;
     }
     .tabBtnAdimDefault,
@@ -27,19 +11,44 @@
         display: table-cell;
         vertical-align: middle;
         text-align: center;
+        position: relative;
         > a{
             display: block;
         }
+        &:after{
+            content:'';
+            display: block;
+            width: 4px;
+            height: 4px;
+            background: none;
+            border-radius: $borderRadius;
+            margin-left: $mLeftAuto;
+            margin-top: 3px;
+            margin-right: $mRightAuto;
+        }
+        .icon {
+            display: block;
+            margin-left: $mLeftAuto;
+            margin-right: $mRightAuto;
+            color: $stepIconColor;
+            fill-opacity: .4;
+        }
+        .step-txt{
+            font-family: $regular;
+            color: $stepTextColorNormal;
+            opacity: .4;
+            font-size: $siteFontSize;
+        }
     }
-    .icon {
-        display: block;
-        margin-left: $mLeftAuto;
-        margin-right: $mRightAuto;
+    .tabBtnSelectedDefault{
+        .icon{
+            fill-opacity: inherit;
+        }
+        .step-txt{
+            color: $stepTextColorNormal;
+        }
+        &:after{
+            background: $order-step-active-round;
+        }
     }
-}
-
-//Order Steps Link Text Class
-.order-step-txt{
-    font-family: $regular;
-    color: $order-step-text-color;
 }
