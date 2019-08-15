@@ -60,10 +60,17 @@ $colorWhite: #ffffff;
 /*Border Radius*/
 $borderRadius: 100%;
 
+/*Mobile Standart Spacing*/
+$mb-left-spacing:15px;
+$mb-right-spacing:15px;
+
+
 /*Hidden Mobile Element*/
 .visible\@d { display: none !important; }
 
  /*Visible Desktop Element*/
  @media (min-width: $breakpoint-default) {
     .visible\@d { display: inherit !important; }
+
+    .visible\@m { display: none !important; }
  }

@@ -4,6 +4,7 @@
 /*Margin Left Auto Element*/
 /*Site Default Colors*/
 /*Border Radius*/
+/*Mobile Standart Spacing*/
 /*Hidden Mobile Element*/
 .visible\@d {
   display: none !important; }
@@ -11,7 +12,9 @@
 /*Visible Desktop Element*/
 @media (min-width: 1024px) {
   .visible\@d {
-    display: inherit !important; } }
+    display: inherit !important; }
+  .visible\@m {
+    display: none !important; } }
 
 [class*="icon-"], .icon {
   display: inline-block;
@@ -99,9 +102,14 @@ Site General Grid Class Items
 .header {
   background: #202020;
   min-height: 50px; }
+  .header-logo img {
+    max-width: 90px; }
 
 .order-steps .header-site {
   display: none; }
+
+.header-basket {
+  top: 0; }
 
 .member-login-txt {
   font-family: "maison_neuemedium";

@@ -2,4 +2,7 @@
 .header{
     background:#202020;
     min-height: 50px;
+    &-logo{
+        img{max-width: 90px;}
+    }
 }
