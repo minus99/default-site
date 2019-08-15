@@ -22,8 +22,14 @@
         .step-txt{
             color: $colorWhite;
         }
+        .icon{
+            color: $stepIconColorAlternate;
+        }
     }
     .tabBtnSelectedDefault{
+        .icon{
+            color: $colorWhite;
+        }
         .step-txt{
             color: $colorWhite;
             opacity: inherit;

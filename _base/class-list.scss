@@ -70,3 +70,7 @@ Site General Grid Class Items
 .ga5{
     grid-area:EEE;
 }
+.sticky{
+    position: -webkit-sticky;
+    position: sticky;
+}

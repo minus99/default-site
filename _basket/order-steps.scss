@@ -43,6 +43,7 @@
     .tabBtnSelectedDefault{
         .icon{
             fill-opacity: inherit;
+            color: $stepIconColor;
         }
         .step-txt{
             color: $stepTextColorNormal;

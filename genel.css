@@ -91,6 +91,10 @@ Site General Grid Class Items
 .ga5 {
   grid-area: EEE; }
 
+.sticky {
+  position: -webkit-sticky;
+  position: sticky; }
+
 /*Site Header Grid*/
 .header {
   background: #202020;
@@ -145,7 +149,8 @@ Site General Grid Class Items
     font-size: 14px; }
 
 .tabloTabBtnAdim .tabBtnSelectedDefault .icon {
-  fill-opacity: inherit; }
+  fill-opacity: inherit;
+  color: #202020; }
 
 .tabloTabBtnAdim .tabBtnSelectedDefault .step-txt {
   color: #202020; }
@@ -176,6 +181,10 @@ Site General Grid Class Items
       width: 6px;
       height: 6px; }
     .tabloTabBtnAdim .tabBtnAdimDefault .step-txt {
+      color: #ffffff; }
+    .tabloTabBtnAdim .tabBtnAdimDefault .icon {
+      color: #f1f1fa; }
+    .tabloTabBtnAdim .tabBtnSelectedDefault .icon {
       color: #ffffff; }
     .tabloTabBtnAdim .tabBtnSelectedDefault .step-txt {
       color: #ffffff;
