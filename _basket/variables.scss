@@ -1,17 +1,44 @@
-//Basket Sliders Arrow Background -- Optionally
+//Basket page default background
+$basketPageBg: #f3f3f7;
+
+//Basket sliders arrow background -- Optionally
 $sliderArrowBackground: #696b71;
 
-//Order Steps Link Color
+//Basket page step link color
 $stepTextColor: #f1f1fa;
 
-//Order Steps Link Default Color
+//Basket page step link default color
 $stepTextColorNormal: #202020;
 
-//Order Steps Icon Color
+//Basket page step icon color
 $stepIconColor: #202020;
 
-//Order Steps Icon Color
+//Basket page step icon color
 $stepIconColorAlternate: #f1f1fa;
 
-//Order Steps Active Link Background
+//Basket page step active link background
 $order-step-active-round:#3d5deb;
+
+//Basket page step top spacing
+$step-top-spacing:10px;
+
+//Basket page step bottom spacing
+$step-bottom-spacing:10px;
+
+//Basket page logo arrow Right Spacing
+$basket-arrow-back-spacing: 15px;
+
+//Top swiper bottom space
+$swiperTopBottomSpace: 25px;
+
+//Top space mobile
+$basketPageTopSpaceMb:20px;
+
+//Top space desktop
+$basketPageTopSpaceDt:30px;
+
+//Top swiper bullet desktop space
+$basketSwiperBulletTopSpaceDt:15px;
+
+//Top swiper bullet mobile space
+$basketSwiperBulletTopSpaceMb:10px;

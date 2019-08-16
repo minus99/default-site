@@ -4,6 +4,8 @@
         display: table;
         table-layout: fixed;
         width: $fullWidth;
+        margin-top: $step-top-spacing;
+        margin-bottom: $step-bottom-spacing;
     }
     .tabBtnAdimDefault,
     .tabBtnSelectedDefault{

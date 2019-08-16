@@ -1,0 +1,14 @@
+//Basket page triple top Slider
+.basket-swiper{
+    .swiper-slide{
+        width: (100% / 1.3);
+    }
+    div.types{
+        padding: 10px;
+        background: $colorWhite;
+        min-height: 120px;
+    }
+    .swiper-pagination {
+        margin-top: $basketSwiperBulletTopSpaceMb;
+    }
+}

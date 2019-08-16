@@ -1,4 +1,9 @@
-/*Basket Page Background Color*/
 .page-basket{
-    background:#f3f3f7;
+    //Basket page background color
+    background:$basketPageBg;
+
+    // Page top space
+    &-inner{
+        padding-top: $basketPageTopSpaceMb;
+    }
 }

@@ -8,11 +8,15 @@
 //Basket Page Header 
 .header-basket{
     top: 0;
+    z-index: 10;
     .logo{
         @extend .order-1;
     }
     .member{
         @extend .order-2;
+    }
+    .back-arrow{
+        margin-right: $basket-arrow-back-spacing;
     }
 }
 

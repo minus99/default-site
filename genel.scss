@@ -3,31 +3,56 @@
 @import '_base/icon';
 @import '_base/class-list';
 
+
+//-----Site Buttons-----//
+@import '_site-buttons/buttons';
+
+
 //-----Header-----//
 @import '_header/grid';
-@import '_basket/variables';
-@import '_basket/header';
-@import '_basket/order-steps';
+
+
+//-----Plugins-----//
+@import '_plugins/swiper';
+
 
 //-----Content-----//
 @import '_content-grid/main';
 
-//-----Basket-----//
-@import '_basket/main';
 
+//-----Basket-----//
+@import '_basket/variables';
+@import '_basket/header';
+@import '_basket/main';
+@import '_basket/swiper';
+@import '_basket/order-steps';
+
+
+//-----Layout-----//
+@import '_member/variables';
+@import '_pages/variables';
+@import '_product-list/variables';
+@import '_product-detail/variables';
 
 
 @supports(grid-area: auto) {
     @media screen and (min-width: $breakpoint-default) {
-        
+        //-----Base-----//
+        @import '_base/class-list-desktop';
+
+
         //-----Header-----//
-        @import '_basket/header-desktop';
-        @import '_basket/order-steps-desktop';
+        @import '_header/grid-desktop';
+        
 
         //-----Content-----//
         @import '_content-grid/main-desktop';
 
+
         //-----Basket-----//
+        @import '_basket/header-desktop';
         @import '_basket/main-desktop';
+        @import '_basket/order-steps-desktop';
+        @import '_basket/swiper-desktop';
     }
 }
