@@ -77,28 +77,33 @@ Site General Flex Class Items
 
 a.btnDefault {
   display: block;
+  width: 100%;
   background: #3d5deb;
   border-radius: 3px;
   text-align: center;
   padding: 16px 5px 15px 5px; }
   a.btnDefault > span {
-    font-family: "maison_neuedemibold";
+    font-family: "bold";
     color: #ffffff;
     font-size: 16px; }
 
 a.btnAlternate {
   display: block;
+  width: 100%;
   border: 1px solid #3d5deb;
   padding: 16px 5px 15px 5px;
   text-align: center;
   border-radius: 3px; }
   a.btnAlternate > span {
-    font-family: "maison_neuedemibold";
+    font-family: "bold";
     color: #3d5deb;
     font-size: 16px; }
 
-a.btnAlternateSmall > span {
-  font-size: 14px; }
+a.btnAlternateSmall {
+  padding-top: 7px;
+  padding-bottom: 6px; }
+  a.btnAlternateSmall > span {
+    font-size: 14px; }
 
 a.btnLink > span {
   font-size: 12px;
@@ -744,7 +749,7 @@ button.swiper-pagination-bullet {
     margin-right: 15px; }
 
 .member-login-txt {
-  font-family: "maison_neuemedium";
+  font-family: "medium";
   color: #ffffff;
   margin-right: 5px; }
 
@@ -760,6 +765,20 @@ button.swiper-pagination-bullet {
   padding: 10px;
   background: #ffffff;
   min-height: 120px; }
+  .basket-swiper div.types .image {
+    width: 90px;
+    margin-right: 15px; }
+  .basket-swiper div.types .detail {
+    width: calc(100% - 90px); }
+
+.basket-swiper .prd-spc {
+  color: #e72f2f; }
+
+.basket-swiper .prd-name {
+  margin-top: 5px; }
+
+.basket-swiper a.btnAlternateSmall {
+  max-width: 68px; }
 
 .basket-swiper .swiper-pagination {
   margin-top: 10px; }
@@ -801,7 +820,7 @@ button.swiper-pagination-bullet {
     fill-opacity: .4; }
   .tabloTabBtnAdim .tabBtnAdimDefault .step-txt,
   .tabloTabBtnAdim .tabBtnSelectedDefault .step-txt {
-    font-family: "maison_neuebook";
+    font-family: "regular";
     color: #202020;
     opacity: .4;
     font-size: 14px; }
@@ -815,6 +834,38 @@ button.swiper-pagination-bullet {
 
 .tabloTabBtnAdim .tabBtnSelectedDefault:after {
   background: #3d5deb; }
+
+.order-summary {
+  background: #ffffff;
+  padding: 20px; }
+  .order-summary .mn-20 > span {
+    display: block;
+    font-family: "medium";
+    font-size: 20px;
+    margin-bottom: 20px; }
+  .order-summary-wrapper {
+    flex-wrap: wrap; }
+    .order-summary-wrapper > * {
+      width: 100%; }
+
+.pnlDipToplamTable > tbody > tr {
+  display: table;
+  width: 100%;
+  margin-bottom: 10px; }
+  .pnlDipToplamTable > tbody > tr > th, .pnlDipToplamTable > tbody > tr > td {
+    font-size: 14px;
+    font-family: "regular";
+    font-weight: normal; }
+  .pnlDipToplamTable > tbody > tr > th {
+    text-align: left; }
+  .pnlDipToplamTable > tbody > tr > td {
+    text-align: right; }
+  .pnlDipToplamTable > tbody > tr.pnlDipToplam_sipToplam > th, .pnlDipToplamTable > tbody > tr.pnlDipToplam_sipToplam > td {
+    font-family: "bold"; }
+  .pnlDipToplamTable > tbody > tr.pnlDipToplam_indirimToplam > th, .pnlDipToplamTable > tbody > tr.pnlDipToplam_indirimToplam > td {
+    color: #e72f2f; }
+  .pnlDipToplamTable > tbody > tr.pnlDipToplam_indirimliAraToplam, .pnlDipToplamTable > tbody > tr.pnlDipToplam_kargoHaricToplam {
+    display: none; }
 
 @supports (grid-area: auto) {
   @media screen and (min-width: 1024px) {
@@ -882,6 +933,10 @@ Site General Grid Class Items
       width: 33.33333%; }
     .basket-swiper div.types {
       padding: 15px; }
+      .basket-swiper div.types .image {
+        width: 100px; }
+      .basket-swiper div.types .detail {
+        width: calc(100% - 100px); }
     .basket-swiper .swiper-button-next,
     .basket-swiper .swiper-container-rtl .swiper-button-prev {
       right: -3%; }
@@ -889,6 +944,12 @@ Site General Grid Class Items
     .basket-swiper .swiper-container-rtl .swiper-button-next {
       left: -3%; }
     .basket-swiper .swiper-pagination {
-      margin-top: 15px; } } }
+      margin-top: 15px; }
+    .order-summary {
+      order: 1; }
+      .order-summary-benefit {
+        order: 2; }
+      .order-summary .btnSiparisTamamla {
+        margin-top: 10px; } } }
 
 /*# sourceMappingURL=genel.css.map */

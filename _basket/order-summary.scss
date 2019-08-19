@@ -1,0 +1,63 @@
+//Order summary grid
+.order-summary{
+    background: $orderSummaryBg;
+    padding: $orderSummaryPadding;
+
+    //Order summary title
+    .mn-20 > span{
+        display: block;
+        font-family: $medium;
+        font-size: $orderSummaryTitle;
+        margin-bottom: $orderSummaryTitleBottomSpace;
+    }
+    //Order summary flex wrap
+    &-wrapper{
+        flex-wrap: wrap;
+        > *{
+            width: 100%;
+        }
+    }
+}
+// Order sumary table
+.pnlDipToplamTable{
+    > tbody{
+        > tr{
+            //Order summary table tr row bottom space
+            display: table;
+            width: $fullWidth;
+            margin-bottom: $orderSummaryRowBottomSpace;
+
+            // Order sumary table > text align control
+            > th, > td{
+                font-size: $orderSummaryTableFontSize;
+                font-family: $regular;
+                font-weight: normal;
+            }
+            // Align left
+            > th{
+                text-align: $alignLeft;
+            }
+            // Align right
+            > td{
+                text-align: $alignRight;
+            }
+            // Total price bold font-family
+            &.pnlDipToplam_sipToplam{
+                > th, > td{
+                    font-family: $bold;
+                }   
+            }
+            //Order summary tr row discount text color -- Optionally
+            &.pnlDipToplam_indirimToplam{
+                > th, > td{
+                    color: $colorRed;
+                }
+            }
+            // Order summary hidden rows
+            &.pnlDipToplam_indirimliAraToplam,
+            &.pnlDipToplam_kargoHaricToplam {
+                display: none;
+            }
+        }
+    }   
+}

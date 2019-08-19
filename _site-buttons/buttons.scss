@@ -1,5 +1,7 @@
+//Site default button
 a.btnDefault{
     display: block;
+    width: 100%;
     background: $btnBackground; 
     border-radius: $buttonRadius;
     text-align: center;
@@ -10,9 +12,10 @@ a.btnDefault{
         font-size: 16px;
     }
 }
-
+//Site alternate button
 a.btnAlternate{
     display: block;
+    width: 100%;
     border:1px solid $btnBorder;
     padding: 16px 5px 15px 5px;
     text-align: center;
@@ -23,12 +26,15 @@ a.btnAlternate{
         font-size: 16px;
     }
 }
+//Site alternate font small button
 a.btnAlternateSmall{
+    padding-top: 7px;
+    padding-bottom: 6px;
     > span{
         font-size: 14px;
     }
 }
-
+//Site link button
 a.btnLink{
     > span{
         font-size: 12px;

@@ -1,0 +1,14 @@
+//Order summary grid desktop
+.order-summary{
+    //Desktop for sorting 1
+    order: 1;
+
+    //Desktop for sorting 2
+    &-benefit{
+        order: 2;
+    }
+    // Order summary button next
+    .btnSiparisTamamla{
+        margin-top: $orderSummaryButtonNextTopSpace;
+    }
+}

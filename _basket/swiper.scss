@@ -1,13 +1,35 @@
 //Basket page triple top Slider
 .basket-swiper{
+    // Swiper slide
     .swiper-slide{
         width: (100% / 1.3);
     }
+    // Swiper slide content
     div.types{
         padding: 10px;
         background: $colorWhite;
         min-height: 120px;
+        .image{
+            width: 90px;
+            margin-right: 15px;
+        }
+        .detail{
+            width: calc(100% - 90px);
+        }
     }
+    //Color red default variables
+    .prd-spc{
+        color: $colorRed;
+    }
+    //Swiper product name
+    .prd-name{
+        margin-top: $swiperNameTopSpace;
+    }
+    //Swiper button max width
+    a.btnAlternateSmall{
+        max-width: $swiperAddButtonMaxWidth;
+    }
+    // Swiper pagination
     .swiper-pagination {
         margin-top: $basketSwiperBulletTopSpaceMb;
     }

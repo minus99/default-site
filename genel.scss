@@ -26,6 +26,7 @@
 @import '_basket/main';
 @import '_basket/swiper';
 @import '_basket/order-steps';
+@import '_basket/order-summary';
 
 
 //-----Layout-----//
@@ -54,5 +55,7 @@
         @import '_basket/main-desktop';
         @import '_basket/order-steps-desktop';
         @import '_basket/swiper-desktop';
+        @import '_basket/order-summary-desktop';
+
     }
 }
