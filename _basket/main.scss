@@ -1,9 +1,19 @@
-.page-basket{
-    //Basket page background color
+.order-steps{
+    //Sepet sayfası arka plan rengi -- Opsiyonel
     background:$basketPageBg;
-
-    // Page top space
+}
+.page-basket{
+    //Sepet sayfası ust bosluk
     &-inner{
         padding-top: $basketPageTopSpaceMb;
     }
+}
+//Sepet adimlari üst basliklari
+.title-middle{
+    font-family: $medium;
+    font-size: $basketPageTopTitle;
+}
+//Sepet adimlari spet ozel üst baslik
+.title-middle-basket{
+    padding: 20px 20px 0 20px;
 }

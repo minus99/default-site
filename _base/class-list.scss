@@ -28,7 +28,7 @@ Site General Flex Class Items
     align-items: flex-end;
 }
 
-/*Default Flex Order List*/
+/*Css flex icin sıralama class listesi*/
 .order{
     &-1{    
         order: 1;
@@ -46,8 +46,13 @@ Site General Flex Class Items
         order: 5;
     }
 }
-
+//Site ici genel sticky class'ı 
 .sticky{
     position: -webkit-sticky;
     position: sticky;
+    
+}
+//Site ici genel eleman gizleme class'ı
+.ems-none{
+    display: none; 
 }

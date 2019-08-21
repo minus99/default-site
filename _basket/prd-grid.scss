@@ -1,0 +1,22 @@
+//Sepet sayfası tablo grid kapsayıcı rka planı
+.ems-grid-table-wrap{
+    background: $colorWhite;
+}
+
+//Sepet tablo row grid'i
+.gridRowSepetListe {
+    padding: 20px;
+    display: flex;
+
+    //Sepet tablo row image
+    .ems-grid-img{
+        width: 90px;
+        img{
+            max-width: 120px;
+        }
+    }
+    //Sepet tablo row urun detay kolon
+    .grid-right{
+        width: calc(100% - 90px);
+    }
+}

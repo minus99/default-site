@@ -1,5 +1,6 @@
 //-----Base-----//
 @import '_base/variables';
+@import '_app-shell/first-loading';
 @import '_base/icon';
 @import '_base/class-list';
 
@@ -22,18 +23,23 @@
 
 //-----Basket-----//
 @import '_basket/variables';
-@import '_basket/header';
 @import '_basket/main';
-@import '_basket/swiper';
+@import '_basket/header';
 @import '_basket/order-steps';
 @import '_basket/order-summary';
+@import '_basket/prd-grid';
+@import '_basket/swiper';
 
 
 //-----Layout-----//
-@import '_member/variables';
 @import '_pages/variables';
 @import '_product-list/variables';
 @import '_product-detail/variables';
+
+
+//-----Member Page-----//
+@import '_member/variables';
+@import '_member/member-info'; 
 
 
 @supports(grid-area: auto) {
@@ -48,14 +54,15 @@
 
         //-----Content-----//
         @import '_content-grid/main-desktop';
-
+        
 
         //-----Basket-----//
-        @import '_basket/header-desktop';
         @import '_basket/main-desktop';
+        //@import '_basket/header-desktop';
         @import '_basket/order-steps-desktop';
-        @import '_basket/swiper-desktop';
         @import '_basket/order-summary-desktop';
+        @import '_basket/prd-grid-desktop';
+        @import '_basket/swiper-desktop';
 
     }
 }

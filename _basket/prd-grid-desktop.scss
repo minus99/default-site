@@ -1,0 +1,9 @@
+//Sepet tablo row grid'i
+.gridRowSepetListe {
+    .ems-grid-img{
+        width: 120px;
+    }
+    .grid-right{
+        width: calc(100% - 120px);
+    }
+}

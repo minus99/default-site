@@ -1,59 +1,95 @@
-//Order summary grid
+//Siparis ozet ızgara
 .order-summary{
     background: $orderSummaryBg;
     padding: $orderSummaryPadding;
 
-    //Order summary title
+    //Siparis ozet baslik
     .mn-20 > span{
         display: block;
         font-family: $medium;
         font-size: $orderSummaryTitle;
         margin-bottom: $orderSummaryTitleBottomSpace;
     }
-    //Order summary flex wrap
+    //Siparis ozet alt elementler icin alt alta siralama
     &-wrapper{
         flex-wrap: wrap;
         > *{
             width: 100%;
         }
     }
+    //Sepet satin alma avantaj ikonları
+    &-benefit{
+        flex-wrap: wrap;
+        li{
+            width: 50%;
+            text-align: $alignCenter;
+            margin-bottom: $basketBenefitMarginBottom;
+            .icon{
+                margin-bottom: $basketBenefitIconMarginBottom;
+            }
+        }
+    }
+    //Siparis ozet yardim
+    &-help{
+        border: 1px solid $basketHelpBorderColor;
+        border-radius: $basketHelpBorderRadius;
+        padding: $basketHelpPadding;
+
+        //Siparis ozet yardim footer renk deseni
+        *{
+            color: $basketHelpTextColor;
+        }
+        //Siparis ozet yardim header
+        .help-header{
+            > span{
+                font-size: $basketHelpHeaderFontSize;
+                font-family: $medium;
+            }
+        }
+        //Siparis ozet yardim footer
+        .help-footer{
+            > a{
+                display: inline-block;
+            }
+        }
+    }
 }
-// Order sumary table
+//Siparis ozet tablo ızgara
 .pnlDipToplamTable{
     > tbody{
         > tr{
-            //Order summary table tr row bottom space
+            //Siparis ozet tablo satırlar icin alt bosluk ve ozellestirme
             display: table;
             width: $fullWidth;
             margin-bottom: $orderSummaryRowBottomSpace;
 
-            // Order sumary table > text align control
+            //Siparis ozet tablo > metin ozellestirme
             > th, > td{
                 font-size: $orderSummaryTableFontSize;
                 font-family: $regular;
                 font-weight: normal;
             }
-            // Align left
+            //Th sola hilalı
             > th{
                 text-align: $alignLeft;
             }
-            // Align right
+            //Td sağa hizalı
             > td{
                 text-align: $alignRight;
             }
-            // Total price bold font-family
+            //toplam tutar metin ozellestirme
             &.pnlDipToplam_sipToplam{
                 > th, > td{
                     font-family: $bold;
                 }   
             }
-            //Order summary tr row discount text color -- Optionally
+            //Siparis ozet indirim satırı renk ozellestirme -- Opsiyonel
             &.pnlDipToplam_indirimToplam{
                 > th, > td{
                     color: $colorRed;
                 }
             }
-            // Order summary hidden rows
+            //Siparis ozet gizlenen satırlar
             &.pnlDipToplam_indirimliAraToplam,
             &.pnlDipToplam_kargoHaricToplam {
                 display: none;

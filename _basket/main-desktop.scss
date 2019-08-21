@@ -1,18 +1,23 @@
 .page-basket{
-    // Page top space
+    //Sepet sayfası ust bosluk
     &-inner{
         padding-top: $basketPageTopSpaceDt;
+    }
+    //Sepet row 1 swiper alt bosluk
+    .rw1{
+        margin-bottom: $swiperTopBottomSpace;
     }
 }
 
 .basket-grid {
-    grid-template-columns: minmax(0,5%) minmax(auto,1fr) minmax(0,30px) minmax(0,380px) minmax(0,5%);
-    grid-template-areas:
-    ". AAA AAA AAA ."
-    ". BBB . CCC .";
-
-    // Basket top swiper bottom space
+    grid-template-columns: minmax(0,5%) minmax(0,33%) minmax(0,33%) minmax(0,33%) minmax(0,5%);
+    grid-template-areas: ". AAA AAA BBB .";
+    //Sepet urunler sağ padding boslugu
     .ga1{
-        margin-bottom: $swiperTopBottomSpace;
+        padding-right: $basketPageRightPadding;
+    }
+    //Sepet ozet sol padding boslugu
+    .ga2{
+        padding-left: $basketPageLeftPadding;
     }
 }

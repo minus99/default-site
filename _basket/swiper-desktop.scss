@@ -1,9 +1,9 @@
-//Basket page triple top Slider
+//Sepet ust slider
 .basket-swiper{
     .swiper-slide{ 
         width: (100% / 3);
     }
-    // Swiper Slide content
+    //Sepet ust slider icerik
     div.types{
         padding: 15px;
         .image{
@@ -13,14 +13,17 @@
             width: calc(100% - 100px);
         }
     }
+    //Sepet ust slider ileri button
     .swiper-button-next,
     .swiper-container-rtl .swiper-button-prev {
         right: -3%;
     }
+    //Sepet ust slider geri button
     .swiper-button-prev,
     .swiper-container-rtl .swiper-button-next{
         left: -3%;
     }
+    //Sepet ust slider bullet
     .swiper-pagination {
         margin-top: $basketSwiperBulletTopSpaceDt;
     }

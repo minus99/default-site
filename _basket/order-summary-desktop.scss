@@ -1,13 +1,18 @@
-//Order summary grid desktop
+//siparis ozet masaustu ızgara
 .order-summary{
-    //Desktop for sorting 1
+    //Siparis sepet ozet
     order: 1;
+    margin-bottom: $orderSummaryMarginBottomDesktop;
 
-    //Desktop for sorting 2
+    //Siparis ozet avantaj ikonları
     &-benefit{
         order: 2;
     }
-    // Order summary button next
+    //Siparis ozet yardim
+    &-help{
+        order: 3;
+    }
+    //Siparis ozet button alisveris
     .btnSiparisTamamla{
         margin-top: $orderSummaryButtonNextTopSpace;
     }

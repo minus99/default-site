@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*Full Width Element*/
 /*Width Auto Element*/
 /*Margin Left Auto Element*/
@@ -55,7 +56,7 @@ Site General Flex Class Items
 .align-items-end {
   align-items: flex-end; }
 
-/*Default Flex Order List*/
+/*Css flex icin sıralama class listesi*/
 .order-1, .header-basket .logo {
   order: 1; }
 
@@ -74,6 +75,9 @@ Site General Flex Class Items
 .sticky {
   position: -webkit-sticky;
   position: sticky; }
+
+.ems-none {
+  display: none; }
 
 a.btnDefault {
   display: block;
@@ -758,31 +762,6 @@ button.swiper-pagination-bullet {
   .page-basket-inner {
     padding-top: 20px; }
 
-.basket-swiper .swiper-slide {
-  width: 76.92308%; }
-
-.basket-swiper div.types {
-  padding: 10px;
-  background: #ffffff;
-  min-height: 120px; }
-  .basket-swiper div.types .image {
-    width: 90px;
-    margin-right: 15px; }
-  .basket-swiper div.types .detail {
-    width: calc(100% - 90px); }
-
-.basket-swiper .prd-spc {
-  color: #e72f2f; }
-
-.basket-swiper .prd-name {
-  margin-top: 5px; }
-
-.basket-swiper a.btnAlternateSmall {
-  max-width: 68px; }
-
-.basket-swiper .swiper-pagination {
-  margin-top: 10px; }
-
 .tabloTabBtnAdim > tbody > tr > td {
   display: table;
   table-layout: fixed;
@@ -847,6 +826,25 @@ button.swiper-pagination-bullet {
     flex-wrap: wrap; }
     .order-summary-wrapper > * {
       width: 100%; }
+  .order-summary-benefit {
+    flex-wrap: wrap; }
+    .order-summary-benefit li {
+      width: 50%;
+      text-align: center;
+      margin-bottom: 20px; }
+      .order-summary-benefit li .icon {
+        margin-bottom: 5px; }
+  .order-summary-help {
+    border: 1px solid #696b71;
+    border-radius: 4px;
+    padding: 20px; }
+    .order-summary-help * {
+      color: #696b71; }
+    .order-summary-help .help-header > span {
+      font-size: 16px;
+      font-family: "medium"; }
+    .order-summary-help .help-footer > a {
+      display: inline-block; }
 
 .pnlDipToplamTable > tbody > tr {
   display: table;
@@ -866,6 +864,34 @@ button.swiper-pagination-bullet {
     color: #e72f2f; }
   .pnlDipToplamTable > tbody > tr.pnlDipToplam_indirimliAraToplam, .pnlDipToplamTable > tbody > tr.pnlDipToplam_kargoHaricToplam {
     display: none; }
+
+.basket-swiper .swiper-slide {
+  width: 76.92308%; }
+
+.basket-swiper div.types {
+  padding: 10px;
+  background: #ffffff;
+  min-height: 120px; }
+  .basket-swiper div.types .image {
+    width: 90px;
+    margin-right: 15px; }
+  .basket-swiper div.types .detail {
+    width: calc(100% - 90px); }
+
+.basket-swiper .prd-spc {
+  color: #e72f2f; }
+
+.basket-swiper .prd-name {
+  margin-top: 5px; }
+
+.basket-swiper a.btnAlternateSmall {
+  max-width: 68px; }
+
+.basket-swiper .swiper-pagination {
+  margin-top: 10px; }
+
+.member-grid {
+  display: none; }
 
 @supports (grid-area: auto) {
   @media screen and (min-width: 1024px) {
@@ -898,8 +924,8 @@ Site General Grid Class Items
     .page-basket-inner {
       padding-top: 30px; }
     .basket-grid {
-      grid-template-columns: minmax(0, 5%) minmax(auto, 1fr) minmax(0, 30px) minmax(0, 380px) minmax(0, 5%);
-      grid-template-areas: ". AAA AAA AAA ." ". BBB . CCC ."; }
+      grid-template-columns: minmax(0, 5%) minmax(0, 33%) minmax(0, 33%) minmax(0, 60px) minmax(0, 33%) minmax(0, 5%);
+      grid-template-areas: ". AAA AAA AAA AAA ." ". BBB BBB . CCC ."; }
       .basket-grid .ga1 {
         margin-bottom: 25px; }
     .basket-steps {
@@ -946,9 +972,12 @@ Site General Grid Class Items
     .basket-swiper .swiper-pagination {
       margin-top: 15px; }
     .order-summary {
-      order: 1; }
+      order: 1;
+      margin-bottom: 50px; }
       .order-summary-benefit {
         order: 2; }
+      .order-summary-help {
+        order: 3; }
       .order-summary .btnSiparisTamamla {
         margin-top: 10px; } } }
 

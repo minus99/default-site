@@ -1,78 +1,113 @@
-//Basket page default background
+//Sepet sayfası arka plan rengi
 $basketPageBg: #f3f3f7;
 
-//Basket sliders arrow background -- Optionally
-$sliderArrowBackground: #696b71;
-
-//Basket page step link color
-$stepTextColor: #f1f1fa;
-
-//Basket page step link default color
-$stepTextColorNormal: #202020;
-
-//Basket page step icon color
-$stepIconColor: #202020;
-
-//Basket page step icon color
-$stepIconColorAlternate: #f1f1fa;
-
-//Basket page step active link background
-$order-step-active-round:#3d5deb;
-
-//Basket page step top spacing
-$step-top-spacing:10px;
-
-//Basket page step bottom spacing
-$step-bottom-spacing:10px;
-
-//Basket page logo arrow Right Spacing
-$basket-arrow-back-spacing: 15px;
-
-//Top swiper bottom space
-$swiperTopBottomSpace: 25px;
-
-//Top space mobile
+//Sepet sayfası mobile ust bosluk
 $basketPageTopSpaceMb:20px;
 
-//Top space desktop
+//Sepet sayfası desktop ust bosluk
 $basketPageTopSpaceDt:30px;
 
-//Top swiper bullet desktop space
+//Sepet sayfası mobile ust bosluk
+$basketPageTopTitle:20px;
+
+//Sepet sayfası sol urun grid padding sağdan bosluk
+$basketPageRightPadding:10px;
+
+//Sepet ozet sol padding boslugu
+$basketPageLeftPadding:20px;
+
+//Sepet swiper slider bottun arkaplanı -- Opsiyonel
+$sliderArrowBackground: #696b71;
+
+//Sepet adımları metin rengi
+$stepTextColor: #f1f1fa;
+
+//Sepet adımları link varsayılan rengi
+$stepTextColorNormal: #202020;
+
+//Sepet adımları ikon rengi
+$stepIconColor: #202020;
+
+//Sepet adımalrı alternatif ikon rengi
+$stepIconColorAlternate: #f1f1fa;
+
+//Sepet adımları aktif link arka plan rengi
+$order-step-active-round:#3d5deb;
+
+//sepet adımları üst bosluk
+$step-top-spacing:10px;
+
+//Sepet adımları alt bosluk
+$step-bottom-spacing:10px;
+
+//Sepet mobile header logo sağ bosluk
+$basketArrowBackSpacing: 15px;
+
+//Sepet üst slider alt bosluk
+$swiperTopBottomSpace: 25px;
+
+//Sepet üst slider desktop bullet ust bosluk
 $basketSwiperBulletTopSpaceDt:15px;
 
-//Top swiper bullet mobile space
+//Sepet üst slider mobile bullet ust bosluk
 $basketSwiperBulletTopSpaceMb:10px;
 
-//Top swiper product name top space
+//Sepet üst slider urun adı ust bosluk
 $swiperNameTopSpace: 5px;
 
-//Top swiper add button
+//Sepet üst slider ekle buton max-genislik
 $swiperAddButtonMaxWidth: 68px;
 
-//Order summary background
+//Siparis ozet arka plan
 $orderSummaryBg: #ffffff;
 
-//Order summary padding spacing
+// Siparis ozet desktop alt bosluk
+$orderSummaryMarginBottomDesktop:50px;
+
+//Siparis ozet ic bosluk
 $orderSummaryPadding:20px;
 
-//Order summary title
+//Siparis ozet baslik
 $orderSummaryTitle:20px;
 
-//Order summary title Bottom Space
+//Siparis ozet baslık alt bosluk
 $orderSummaryTitleBottomSpace:20px;
 
-//Order summary table tr row bottom space
+//Siparis ozet tablo satır alt bosluk
 $orderSummaryRowBottomSpace:10px;
 
-//Order summary text font size
+//Siparis ozet yazı boyutu
 $orderSummaryTableFontSize:14px;
 
-// Order summary buttons next top space
+//Siparis ozet satın al buton ust bosluk
 $orderSummaryButtonNextTopSpace:10px;
 
+//Sepet ozet avantaj ikonları
+$basketBenefitMarginBottom: 20px;
 
-//Align Left
+//Sepet ozet avantaj ikon alt bosluk
+$basketBenefitIconMarginBottom: 5px;
+
+//Sepet ozet yardim border rengi
+$basketHelpBorderColor: #696b71;
+
+//Sepet ozet yardim border radius
+$basketHelpBorderRadius: 4px;
+
+//Sepet ozet yardim padding
+$basketHelpPadding: 20px;
+
+//Sepet ozet yardim header yazı boyutu
+$basketHelpHeaderFontSize: 16px;
+
+//Sepet ozet yardim footer yazı renkleri
+$basketHelpTextColor: #696b71;
+
+//Align left
 $alignLeft:left;
 
-//Align Right
+//Align right
 $alignRight:right;
+
+//Align center
+$alignCenter:center;
