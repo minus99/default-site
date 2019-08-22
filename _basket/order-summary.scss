@@ -35,19 +35,27 @@
         border-radius: $basketHelpBorderRadius;
         padding: $basketHelpPadding;
 
-        //Siparis ozet yardim footer renk deseni
+        //Siparis ozet yardim footer metin renk deseni
         *{
-            color: $basketHelpTextColor;
+            color: $colorAlternate;
         }
         //Siparis ozet yardim header
         .help-header{
             > span{
-                font-size: $basketHelpHeaderFontSize;
+                font-size: $fontSize16;
                 font-family: $medium;
             }
         }
         //Siparis ozet yardim footer
         .help-footer{
+            //Yardım linkleri renk deseni
+            *{
+                font-size: $fontSize14;
+            }
+            > p, > a{
+                //Yardım metin ve link ust bosluklari
+                margin-top: 10px;
+            }
             > a{
                 display: inline-block;
             }

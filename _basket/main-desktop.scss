@@ -10,7 +10,7 @@
 }
 
 .basket-grid {
-    grid-template-columns: minmax(0,5%) minmax(0,33%) minmax(0,33%) minmax(0,33%) minmax(0,5%);
+    grid-template-columns: minmax(0,3%) minmax(0,33%) minmax(0,33%) minmax(0,33%) minmax(0,3%);
     grid-template-areas: ". AAA AAA BBB .";
     //Sepet urunler sağ padding boslugu
     .ga1{

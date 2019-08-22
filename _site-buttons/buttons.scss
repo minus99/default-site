@@ -1,4 +1,4 @@
-//Site default button
+//Site varsayilan butonlar
 a.btnDefault{
     display: block;
     width: 100%;
@@ -9,10 +9,10 @@ a.btnDefault{
     > span{
         font-family: $bold;
         color: $colorWhite;
-        font-size: 16px;
+        font-size: $fontSize16;
     }
 }
-//Site alternate button
+//Site alternatif butonlar
 a.btnAlternate{
     display: block;
     width: 100%;
@@ -26,7 +26,7 @@ a.btnAlternate{
         font-size: 16px;
     }
 }
-//Site alternate font small button
+//Site alternatif yazı boyutu kücük butonlar
 a.btnAlternateSmall{
     padding-top: 7px;
     padding-bottom: 6px;
@@ -34,11 +34,38 @@ a.btnAlternateSmall{
         font-size: 14px;
     }
 }
-//Site link button
+//Site altı cizili butonları
 a.btnLink{
     > span{
         font-size: 12px;
         color: $linkButtonColor;
         text-decoration: $linkUnderline;
+    }
+}
+//Site arka plansız butonlar
+a.btnAlisverisDevam,
+a.btnSepetBosalt{
+    background: none;
+    width: auto;
+    padding-left: 0;
+    padding-right: 0;
+    > span{
+        font-family:$regular;
+        color: $colorAlternate;
+        font-size: $fontSize14;
+        @extend .display-flex;
+        @extend .align-items-center;
+    }
+}
+//Arka plansız buton sagdan margin ikon
+a.btnRightIcon{
+    .icon{
+        @extend .m-rght-5;
+    }
+}
+//Arka plansız buton soldan margin ikon
+a.btnLeftIcon{
+    .icon{
+        @extend .m-lft-5;
     }
 }

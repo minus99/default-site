@@ -1,9 +1,19 @@
-//Sepet tablo row grid'i
-.gridRowSepetListe {
-    .ems-grid-img{
+//Sepet tablo grid'i
+.grid-table-row {
+    //Sepet tablo satır image kolonu
+    .grid-img{
         width: 120px;
     }
-    .grid-right{
+    //Sepet tablo satır urun detay kolon
+    .grid-content{
         width: calc(100% - 120px);
+        &-left{
+            width: calc(100% - 200px);
+        }
+    }
+    //Urun fiyatlari
+    span[id$="lblURN_INDIRIMLIFIYAT"],
+    .gridSepetListe_gercekFiyat{
+        font-size: $fontSize16;
     }
 }

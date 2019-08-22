@@ -4,6 +4,7 @@ Site General Grid Class Items
     
 ***************** ****************/
 .display-grid{
+    display: -ms-grid;
     display: grid;
 }
 .ga1{

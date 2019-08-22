@@ -12,25 +12,58 @@
         .image{
             width: 90px;
             margin-right: 15px;
+            img{
+                max-width: 120px;
+            }
         }
         .detail{
             width: calc(100% - 90px);
+            flex-wrap: wrap;
+            > *{
+                width: 100%;
+            }
+            //kampanyali urun fiyatlari
+            .first{
+                font-family: $medium;
+                color: $colorAlternate;
+                text-decoration: $linkLineThrough;
+            }
+            .last{
+                font-family: $bold;
+                margin-right: 10px;
+            }
         }
     }
     //Sepet ust slider yazı rengi
     .prd-spc{
         color: $colorRed;
+        font-size: $fontSize12;
     }
     //Sepet ust slider urun adı
     .prd-name{
         margin-top: $swiperNameTopSpace;
+        font-size: $fontSize14;
     }
     //Sepet ust slider ekle buton max-genislik
     a.btnAlternateSmall{
         max-width: $swiperAddButtonMaxWidth;
     }
+    //Sepet üst slider sag ve sol oklar
+    .swiper-button-prev,
+    .swiper-button-next{
+        margin-top: $basketSwiperArrowTop;
+    }
     //Sepet ust slider bullet
     .swiper-pagination {
         margin-top: $basketSwiperBulletTopSpaceMb;
+        
+        //Varsayilan class gorunumu
+        &-bullet{
+            background: $colorBulltet;
+        }
+        //Aktif class gorunumu
+        &-bullet-active{
+            background: $colorAlternate;
+        }
     }
 }

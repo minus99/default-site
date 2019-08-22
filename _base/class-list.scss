@@ -4,7 +4,9 @@ Site General Flex Class Items
     
 ***************** ****************/
 .display-flex{
-    display: flex;  
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
 }
 .justify-center{
     justify-content: center;
@@ -53,6 +55,15 @@ Site General Flex Class Items
     
 }
 //Site ici genel eleman gizleme class'ı
-.ems-none{
+.none,
+.emos_invisible{
     display: none; 
+}
+//Margin right 5px
+.m-rght-5{
+    margin-right: 5px;
+}
+//Margin left 5px
+.m-lft-5{
+    margin-left: 5px;
 }
