@@ -1,19 +1,36 @@
+//Sepet sayfası tablo grid kapsayıcı arka plan rengi
+.grid-table-wrap{
+    border-radius: $basketModuleRadius;
+}
 //Sepet tablo grid'i
 .grid-table-row {
-    //Sepet tablo satır image kolonu
+    padding-left: 20px;
+    padding-right: 20px;
+    //Sepet tablo satır image kolonu sabitleniyor
     .grid-img{
         width: 120px;
     }
-    //Sepet tablo satır urun detay kolon
+    //Sepet tablo urun satırı image sabit tutulup kolon akisa alınıyor
     .grid-content{
         width: calc(100% - 120px);
+        //Sol kolon
         &-left{
-            width: calc(100% - 200px);
+            width: calc(100% - 20%);
+        }
+        //Sag kolon
+        &-right{
+            width:20%;
         }
     }
     //Urun fiyatlari
     span[id$="lblURN_INDIRIMLIFIYAT"],
     .gridSepetListe_gercekFiyat{
         font-size: $fontSize16;
+    }
+    //sepet urun silme desktop ozel ust margin
+    .grid-remove{
+        > a{
+            margin-top: 10px;
+        }
     }
 }

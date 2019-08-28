@@ -1,0 +1,59 @@
+.grid-default-address {
+    .grid-adress-row {
+        grid-template-columns: 1fr 70%;  
+        grid-template-rows: minmax(0, auto); 
+        grid-template-areas: 
+        "AAA BBB"
+        "AAA CCC"
+        "AAA DDD" 
+        ;
+        column-gap: 20px;
+        border-bottom: 1px solid $borderColor;
+        margin-bottom: $addressBtnMarginBottom; 
+        padding-bottom: $addressBtnPaddingBottom; 
+        &:last-child {
+            padding: 0;
+            margin: 0;
+            border: 0;
+        }
+    }
+    .grid-address-name {
+        font-family: $addressTitleFont;
+        font-size: $addressTitleColor;
+        line-height: $addressTypeLineHeight;
+        span {
+            display: block;
+            font-family: $addressTypeFont;
+            font-size: $addressTypeFontSize;
+            color: $addressTypeColor;
+        }
+    }
+    .grid-address {
+        font-family: $addressFont;
+        font-size: $addressFontSize;
+        color: $addressColor;
+        line-height: $addressLineHeight; 
+    }
+
+    .grid-address-select:empty {display: none;}
+
+    .address-buttons {
+        a {
+            display:inline-block;
+            width: auto; 
+            background: none;  
+            color: $addressBtnColor; 
+            font-family: $addressBtnFont;
+            font-size: $addressBtnFontSize;
+            line-height: $addressBtnLineHeight;
+            text-decoration: $addressBtnDecoration; 
+            padding: 0;
+            margin-right: $addressBtnMarginRight;
+            span {
+                color: $addressBtnColor; 
+                font-size: $addressBtnFontSize;
+                font-family: $addressBtnFont;
+            }
+        }
+    }
+}

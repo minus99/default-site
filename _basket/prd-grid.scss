@@ -2,22 +2,23 @@
 .grid-table-wrap{
     background: $colorWhite;
 }
-
 //Sepet tablo grid'i
 .grid-table-row {
-    padding: 20px;
-    display: flex;
+    padding: 20px 15px;
+    @extend .display-flex;
+    @extend .relative;
 
-    //Sepet tablo satır image kolonu
+    //Sepet tablo satır image kolonu sabitleniyor
     .grid-img{
         width: 90px;
         img{
             max-width: 120px;
         }
     }
-    //Sepet tablo satır urun detay kolon
+    //Sepet tablo urun satırı image sabit tutulup kolon akisa alınıyor
     .grid-content{
         width: calc(100% - 90px);
+        padding-left: 10px;
     }
     //Sepet tablo urun marka adi
     .grid-brand{
@@ -55,7 +56,9 @@
     //Abonelik periyot sure HTML alanı
     .abonelikUrun{
         //Eger icerik bos ise
-        &:empty{display: none;}
+        &:empty{
+            @extend .none;
+        }
 
         //Site ortak class olan flex class'i extend ediliyor
         @extend .display-flex;
@@ -106,7 +109,71 @@
     //sepet urun silme
     .grid-remove{
         > a{
+            @extend .inline-block;
             @extend a.btnLink;
         }
     } 
+    //Indirim oranı
+    .dvSepetKazancOran{
+        display: inline-flex !important;
+        margin-top: 5px;
+        // Eger bos ise gizleniyor
+        &:empty{
+            @extend .none;
+        }
+        .amount{
+            color: $colorRed;
+        }
+    }
+}
+
+//Sepet Stok Uyari Tablo
+.gridSepetStok{
+    //Header kısmı gizleniyor
+    .gridHeaderSepetStok{
+        @extend .none;
+    }
+    //Row kısmı ozellestiriliyor
+    .gridRowSepetStok{
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+        > td{
+            vertical-align: middle;
+            width: auto;
+            > *{
+                color: $colorDefault;
+            }
+            &:not(:first-child){
+                padding-left: 10px;
+            }
+            &:nth-child(1){
+                width: 100px !important;
+            }
+            &:nth-child(2){
+                @extend .none;
+            }
+        }
+    }
+}
+
+//Sepet stok uyari kapsayıcı
+.grid-basket-stock{
+    //Stok kontrol edilirken gelen uyarı metni alanı
+    .pageErrorStokKontrol{
+        @extend .message;
+        @extend .message-error;
+        margin-bottom: 20px;
+    }
+    .uyari{
+        @extend .display-flex;
+        @extend .align-items-center;
+    }
+    //Stok kontrol edilirken gelen tablo HTML'i
+    .gridSepetStok{
+        display: block;
+        @extend .message;
+        @extend .message-error;
+        margin-bottom: 30px;
+    }
 }

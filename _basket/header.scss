@@ -1,7 +1,7 @@
 //Sepet sayfası genel site header gizleme
 .order-steps{
     .header-site{
-        display: none;
+        @extend .none;
     }
 }
 

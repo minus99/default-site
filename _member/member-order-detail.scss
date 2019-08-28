@@ -1,0 +1,54 @@
+// Sipariş detay içerik bilgileri
+.order-detail-info {
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap; 
+    > div {
+        flex: 1 50%; 
+        display: flex;
+        display: -webkit-flex;
+        margin-bottom: 15px;
+        > div {
+            display: flex;
+            display: -webkit-flex;
+        }
+        .text {
+            color: $sipDetailNumGray; 
+            flex: 0 35%; 
+            padding-right: 10px;
+        }
+        .value {
+            font-family: $medium;
+            color: $sipDetailNumDark; 
+        }
+    } 
+    .no {  
+        flex: 1 100%; 
+        font-size: $sipDetailNumFontSize; 
+        margin-bottom: $sipDetailNumMarginBottom;
+        margin-bottom: 30px;
+        .text {
+            color: $sipDetailNumDark;
+            flex: none;
+        }
+        .value {
+            margin-left: 10px; 
+            font-family: $bold; 
+        }   
+    }
+    .act-btns {
+        border-top: 1px solid $sipDetailBorderColor;
+        margin-bottom: 0; 
+        padding-top: 15px; 
+    }
+}
+
+// Sipariş detay adres
+.order-detail-address {
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    .page-top-title {
+        flex: 1 100%;
+    }
+}

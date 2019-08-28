@@ -3,12 +3,13 @@
     //Sepet ust slider slide
     .swiper-slide{
         width: (100% / 1.3);
+        background-color: $colorWhite;
     }
     //Sepet ust slider icerik
     div.types{
         padding: 10px;
-        background: $colorWhite;
         min-height: 135px;
+        border-radius: $basketModuleRadius;
         .image{
             width: 90px;
             margin-right: 15px;
@@ -64,6 +65,17 @@
         //Aktif class gorunumu
         &-bullet-active{
             background: $colorAlternate;
+        }
+    }
+}
+
+//Teslimat ust slider -- sepet de gelen slider siparis adimlarında tekrar duzenleniyor
+.page-basket-other{
+    //3'lu slider 
+    .basket-swiper{
+        //pagging icin alt bosluk veriliyor
+        .swiper-pagination{
+            margin-bottom: 30px;
         }
     }
 }

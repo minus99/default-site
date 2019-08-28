@@ -12,8 +12,12 @@
 .title-middle{
     font-family: $medium;
     font-size: $basketPageTopTitle;
+    //Bos ise gizleniyor
+    &:empty{
+        display: none;
+    }
 }
 //Sepet adimlari spet ozel üst baslik
 .title-middle-basket{
-    padding: 20px 20px 0 20px;
+    padding: $orderGridTitlePdng;
 }

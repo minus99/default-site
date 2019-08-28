@@ -1,0 +1,17 @@
+.form-obj {
+    input {
+        max-width: $formInputMaxWidth;
+    }
+}
+
+.sStylerWrp_select .sStylerWrp {
+    max-width: $formInputMaxWidth;
+}
+
+// Üyelik genel sayfa yapısı
+.member-grid { 
+    .member-general {
+        padding: $padding20;
+    }
+}
+

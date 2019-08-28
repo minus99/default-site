@@ -3,6 +3,7 @@
     //Siparis sepet ozet
     order: 1;
     margin-bottom: $orderSummaryMarginBottomDesktop;
+    border-radius: $basketModuleRadius;
 
     //Siparis ozet avantaj ikonları
     &-benefit{
@@ -13,7 +14,17 @@
         order: 3;
     }
     //Siparis ozet button alisveris
-    .btnSiparisTamamla{
-        margin-top: $orderSummaryButtonNextTopSpace;
+    .next {
+        a.btnDefault{
+            margin-top: $orderSummaryButtonNextTopSpace;
+        }
+    }
+}
+
+//Siparis adimlarina ozel css
+.page-basket-other{
+    //Siparis adimlari icin alt bosluk
+    .order-summary{
+        margin-bottom: 20px;
     }
 }

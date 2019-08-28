@@ -58,6 +58,9 @@ $step-top-spacing:10px;
 //Sepet adımları alt bosluk
 $step-bottom-spacing:10px;
 
+//Siparis adımları basliklar
+$orderGridTitlePdng:20px;
+
 //Siparis ozet arka plan
 $orderSummaryBg: #ffffff;
 
@@ -94,12 +97,34 @@ $basketHelpBorderColor: #696b71;
 //Sepet ozet yardim border radius
 $basketHelpBorderRadius: 4px;
 
+//Sepet module border radius
+$basketModuleRadius: 4px;
+
 //Sepet ozet yardim padding
 $basketHelpPadding: 20px;
 
 //Sepet tablo grid genel line-height
 $gridLineHghtDefault: 18px;
 
+//Sepet tablo grid bundle arka planı
+$gridBundleBg: #fffcfc;
+
+//Kupon kodu Inputu varsayilan degerler
+$couponInputWidth:100% !important;
+$couponInputMaxWidth:100%;
+$couponInputTopSpc:15px;
+
+//Kupon kodu Label ust boluk
+$couponLblTopSpc:15px;
+
+//Teslimat sol padding boslugu
+$deliveryPageLeftPadding:30px;
+
+//Teslimat kargo sekmesi inline padding
+$cargoInlinePadding:20px;
+
+//Teslimat kargo sekmesi title alt bosluk
+$cargoTitleBottomPadding:20px;
 
 //Align left
 $alignLeft:left;

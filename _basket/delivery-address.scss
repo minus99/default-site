@@ -1,0 +1,46 @@
+//Teslimat adres grid row
+.grid-table-address{
+    background: $colorWhite;
+    border-radius: $basketModuleRadius;
+}
+//Teslimat adres rows
+.grid-table-row-address {
+    flex-wrap: wrap;
+    &:not(:first-child){
+        &:before{
+            @extend .grid-brdr;
+        }
+    }
+}
+//Teslimat adres adı
+.grid-address-name{
+    width: 66.66666%;
+    color: $colorDefault;
+    font-size: $fontSize14;
+    font-family: $bold;
+    > span{
+        @extend .display-block;
+        color: $colorAlternate;
+        font-family: $regular;
+        font-size: $fontSize12;
+        margin-top: 5px;
+    }
+}
+//Teslimat adres butonları
+.grid-address-buttons{
+    width: 33.33333%;
+    a.btnDefault {
+        width: auto;
+        line-height: 18px;
+        @extend a.btnLink;
+
+        //Butonlar arasi bosluk
+        &:not(:first-child){
+            margin-left:15px; 
+         }
+    }
+}
+//Teslimat adres alani
+.grid-address{
+    width: 100%;
+}

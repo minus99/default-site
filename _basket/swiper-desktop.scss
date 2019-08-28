@@ -14,17 +14,24 @@
         }
     }
     //Sepet ust slider ileri button
-    .swiper-button-next,
-    .swiper-container-rtl .swiper-button-prev {
-        right: -3%;
+    .swiper-button-next{
+        right: -45px;
     }
     //Sepet ust slider geri button
-    .swiper-button-prev,
-    .swiper-container-rtl .swiper-button-next{
-        left: -3%;
+    .swiper-button-prev{
+        left: -45px;
     }
     //Sepet ust slider bullet
     .swiper-pagination {
         margin-top: $basketSwiperBulletTopSpaceDt;
+    }
+}
+
+//Teslimat sayfası ust slider ozellestirme
+.order-delivery {
+    .basket-swiper{
+        .swiper-slide{ 
+            width:100%;
+        }
     }
 }

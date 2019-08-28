@@ -1,0 +1,40 @@
+//Teslimat adres grid row
+.grid-table-row-address{
+    @extend .display-grid;
+    grid-template-areas:"A B B D" "A C C D";
+    grid-template-rows: minmax(0,auto);
+    //Default verilen genislikler sabitleniyor
+}
+//Teslimat adres adı
+.grid-address-name{
+    grid-area: A;
+    align-self: flex-start;
+    width: 80%;
+}
+//Teslimat adres alani
+.grid-address{
+    grid-area: B;
+    align-self: flex-start;
+    width: 100%;
+}
+//Teslimat adres butonları
+.grid-address-buttons{
+    grid-area: C;
+    width: 100%;
+    //Sola hizlama default class eziliyor
+    .justify-end{
+        justify-content: flex-start;
+    }
+    //Butonların yüksekliği arttırılıyor
+    a.btnDefault {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+//Adres secim alanı
+.grid-address-select{
+    grid-area: D;
+    padding-right: 8%;
+    align-self: center;
+    justify-self: end;
+}

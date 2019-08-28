@@ -52,7 +52,6 @@ Site General Flex Class Items
 .sticky{
     position: -webkit-sticky;
     position: sticky;
-    
 }
 //Site ici genel eleman gizleme class'ı
 .none,
@@ -66,4 +65,57 @@ Site General Flex Class Items
 //Margin left 5px
 .m-lft-5{
     margin-left: 5px;
+}
+//Margin top 5px
+.m-top-5{
+    margin-top: 5px;
+}
+//Inline block elment
+.inline-block{
+    display: inline-block;
+}
+.display-block{
+    display: block;
+}
+//Tutucu ayarlama
+.relative{
+    position: relative;
+}
+//Site genel mesaj gorunumu
+.message{
+    border-radius: 4px;
+    border-top-width: 1px;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-style: solid;
+    text-align: left;
+    padding: 20px;  
+    //Eğer HTML bos ise alan gizleniyor
+    &:empty{
+        @extend .none;
+    }
+}
+
+//Site genel mesaj hatali gorunum
+.message-error{
+    border-color: $colorRed;
+    background-color: $errorBgColor;
+}
+//Genel kontrol icin eger eleman bos ise class veriliyor
+.is-empty{
+    &:empty{
+        display: none;
+    }
+}
+.grid-brdr{
+    content:'';
+    border-top: 1px solid $gridRowBorder;
+    width: calc(100% - 40px);
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
 }

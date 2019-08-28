@@ -1,0 +1,74 @@
+.member-order {
+    a {
+        color: $orderTextColorDark;
+    }
+    
+    // Siparişlerim Liste
+    .grid-row {
+        display: flex;
+        display: -webkit-flex; 
+        justify-content: space-between;
+        border-bottom: 1px solid $orderBorderColor; 
+        padding-bottom: $orderBottomPadding;
+        margin-bottom: $orderBottomMargin;
+        align-items: start;
+        flex-wrap: wrap;
+        > div:empty {display: none !important;}
+        > div {
+            width: 100%;
+        }
+        &:last-child {
+            padding-bottom: 0;
+            margin-bottom: 0;
+            border: 0;
+        }
+    }
+    // Siparişlerim Header
+    .grid-header {
+        display: none;
+    }
+    
+    // Siparişlerim Liste Düzeni
+    .grid-order-no { 
+        display: flex;
+        display: -webkit-flex;
+        flex-wrap: wrap;   
+        flex: 1 70%;
+        &-label {margin-right: 5px;}
+
+        &-code {font-family: $bold;} 
+        &-date {
+            flex:1 100%; 
+            margin-top: 5px;
+            a {
+                color: $orderTextColorGray;
+            }
+        } 
+    }
+    .grid-total {
+        font-family: $bold;
+        font-size: $orderPriceSize;
+        text-align: right;
+        flex: 1 30%;
+    }
+    .grid-status {
+        flex: 1 50%;
+        text-align: left;
+        padding: 8px 0;
+        margin-top: 15px;
+    }
+    .grid-detail {
+        flex: 1 50%;
+        text-align: right;
+        margin-top: 15px;
+        a {
+            color: $orderTextColorBlue;
+            --color1:  $orderTextColorBlue;
+            font-family: $medium;
+            line-height: 30px;  
+        }
+        svg {
+            float: right;
+        }
+    }
+}

@@ -61,7 +61,50 @@
             }
         }
     }
+    //Kupon kodu
+    .cart-coupon {
+        //Label ust bosluk
+        .coupon-lbl{
+            margin-top: $couponLblTopSpc;
+        }
+        .form-label{
+            //Bos ise gizleniyor
+            &:empty{
+                @extend .none;
+            }
+            //Ikon icin sagdan bosluk
+            .icon{
+                margin-right: 3px;
+                cursor: pointer;
+            }
+        }
+        //Kupon label metni icin font
+        .form-label span{
+            font-family: $regular;
+        }
+        //Kupon kodu gönderme butonu ozellestime
+        .form-obj {
+            //Global den gelen margin resetleniyor
+            margin-bottom: 0;
+
+            //Ust bosluk ayari
+            margin-top: $couponInputTopSpc;
+            //Inputun varsayılan ayarlari
+            input{
+                width: $couponInputWidth;
+                max-width: $couponInputMaxWidth;
+            }   
+        }
+    }
+    //Kupon iptal metni icin ozellestirme
+    .coupon-cancel{
+        > span {
+            color: $colorAlternate;
+            line-height: $gridLineHghtDefault;
+        }
+    }
 }
+
 //Siparis ozet tablo ızgara
 .pnlDipToplamTable{
     > tbody{
@@ -100,7 +143,7 @@
             //Siparis ozet gizlenen satırlar
             &.pnlDipToplam_indirimliAraToplam,
             &.pnlDipToplam_kargoHaricToplam {
-                display: none;
+                @extend .none;
             }
         }
     }   

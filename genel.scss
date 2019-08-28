@@ -32,6 +32,8 @@
 @import '_basket/order-steps';
 @import '_basket/order-summary';
 @import '_basket/prd-grid';
+@import '_basket/delivery-address';
+@import '_basket/delivery-cargo';
 @import '_basket/swiper';
 
 
@@ -43,7 +45,13 @@
 
 //-----Member Page-----//
 @import '_member/variables';
-@import '_member/member-info'; 
+@import '_member/main'; 
+@import '_member/class-list';
+@import '_member/member-info';
+@import '_member/member-menu';
+@import '_member/member-order';
+@import '_member/member-order-detail';
+
 
 
 @supports(grid-area: auto) {
@@ -66,7 +74,18 @@
         @import '_basket/order-steps-desktop';
         @import '_basket/order-summary-desktop';
         @import '_basket/prd-grid-desktop';
+        @import '_basket/delivery-address-desktop';
+        @import '_basket/delivery-cargo-desktop';
         @import '_basket/swiper-desktop';
+
+    
+        //-----Member Page-----//
+        @import '_member/variables';
+        @import '_member/main-desktop'; 
+        @import '_member/member-info-desktop';
+        @import '_member/member-menu-desktop';
+        @import '_member/member-order-desktop';
+        @import '_member/member-order-detail-desktop';
 
     }
 }

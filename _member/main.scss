@@ -1,0 +1,189 @@
+// --- FORM DÜZENLEMLERİ -- //
+
+// Global form ayarları
+input, textarea, select {
+    outline: 0 !important;
+    box-shadow: none !important;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-appearance: none;
+    border: 0;
+    outline: 0;
+    box-shadow: none;
+}
+
+.sStylerWrp_checkbox input, .sStylerWrp_radio input {
+    display: none !important;
+}
+
+// Dropdown stil
+.sStylerWrp_select.sStylerMainWrp {
+    position: relative;
+    display: block;
+}
+.sStylerWrp_select .sStylerWrp {
+    position: relative;
+    line-height: $formInputHeight;
+    color: $formInputColor;
+    font-family: $formInputFamily;
+    border-color: $formInputBorderColor;
+    border-width: $formInputWidth;
+    border-style: $formInputStyle;
+    padding: $formSelectedPadding;
+    border-radius: $formInputRadius;
+}
+.sStylerWrp_select select {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.sStylerWrp_select {
+    .icon-select {
+        position: absolute;
+        right: 5px;
+        top: 50%;
+        transform: translateY(-50%); 
+    }
+    .icon-select-active {
+        display:none;
+    }
+}
+
+// Checkbox stil
+.sStylerWrp_checkbox,
+.sStylerWrp_radio {
+    display: inline-block;
+    vertical-align: -0.8em;
+    margin-right: 5px;
+    user-select: none; 
+    > span {
+        display: block;
+        svg {
+            display: block;
+            font-size: $checkboxSize;
+            &[class*="active"] {
+                display: none;
+            }
+        }
+        &.checked {
+            svg {
+                display: none;
+                &[class*="active"] {
+                    display: block;
+                }
+            }
+        }
+    }
+    input[type=checkbox] {
+        display: none !important;
+    }
+}
+
+// Input metin stil
+.field {
+    &.text {
+        input {width:100%;}
+    }
+    &.field-push {
+        input {
+            width: 100% !important;
+        }
+        .cepTelAlan {
+            width: 70px !important;
+            margin-right: 10px;
+        }
+    }
+    &.field-single {
+        grid-column: span 2; 
+        margin-bottom: $checkboxMarginBottom;
+        .form-obj {
+            margin-bottom: 0px;
+        }
+    }
+    input[type=checkbox] {
+        display: none;
+    }
+    &.field-submit, &.cancel  {margin-bottom: 0;}
+}
+
+.form-label {
+    span {
+        font-size: $labelFontSize;
+        color: $labelFontColor;
+        font-family: $labelFontFamily;  
+        line-height: $labelLineHeight;
+    }
+}
+
+.form-obj {
+    margin-bottom: $formBottomMargin;
+    input {
+        line-height: $formInputHeight;
+        color: $formInputColor;
+        font-family: $formInputFamily;
+        border-color: $formInputBorderColor;
+        border-width: $formInputWidth;
+        border-style: $formInputStyle;
+        padding: $formInputPadding;
+        border-radius: $formInputRadius;
+    }
+    &:empty {display:none;}
+}
+
+// Üyelik bilgileri açıklama metni
+.page-top-desc {
+    margin-bottom: $descriptionBottomMargin;
+}
+
+span[id$="lbfGNL_KAYITYOK"] { 
+    margin-bottom: $notFoundBottomMargin;
+    display: block;
+    color: $colorRed;
+}
+
+// datepicker
+#ui-datepicker-div {display: none;}
+
+// Üyelik genel sayfa yapısı
+.member-grid{
+    //Üyelik sayfası arka plan rengi -- Opsiyonel
+    background:$memberPageBg;
+    padding: $memberPagePadding;
+    .member-general {
+        padding: $padding15;
+        background: $colorWhite; 
+        border-radius: $memberCornerRadius;
+    } 
+    .page-top-title {
+        font-size: $fontSize20;
+        font-family: $medium;
+        margin-bottom: $memberTitleMarginBottom;
+        color: $colorDefault;
+    }
+}
+
+/* Member Alternatif Button */
+
+a.btnSipariseDon {
+    background: none;
+    width: auto;
+    padding: 0; 
+    span {
+        color: $sipDetailBackBtnColor; 
+        font-size: $sipDetailBackBtnSize;
+        font-family: $sipDetailBackBtnFont;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        align-items: center;  
+    } 
+}
+
+
+
+
+

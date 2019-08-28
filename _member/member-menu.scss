@@ -1,0 +1,65 @@
+ // --- ÜYE SAYFASI SOL MENÜ -- //
+
+// Üye sayfası sol menü
+.member-menu {
+    background: $colorWhite;
+    border-radius: $memberCornerRadius;
+}
+
+// Üye sayfası kullanıcı bilgisi
+.member-user {
+    padding: $padding20;
+    &-icon {
+        width: 70px; 
+        height: 70px;
+        background: $userIcoBg;
+        border-radius: $borderRadius;
+    }
+    &-text {
+      a {
+          color: $colorRed;
+          &:hover {
+              color: $colorAlternate;
+          }
+      }  
+    }
+}
+
+// Üye sayfası menü liste
+.swiper-member {
+    .swiper-wrapper {  
+        
+    }
+    .swiper-slide {
+        width: auto;
+        a {
+            display: block;
+        }
+        &.selected {
+            a {
+                color: $btnAlternateColor;
+                border-bottom: 2px solid $btnAlternateColor;
+            }
+        }
+    }
+}
+
+// Üye sayfası sol menü button
+
+a.btnMember {
+    color: $colorDefault;
+    font-family: $medium;
+    padding: 15px;
+    border-bottom: 2px solid $borderColor;
+    transition: all .2s ease;
+    -webkit-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    &:hover {
+        color: $btnAlternateColor;
+        border-color: $btnAlternateColor;
+        &:after {
+            opacity: 1;
+            right: 20px;
+        }
+    }
+}
