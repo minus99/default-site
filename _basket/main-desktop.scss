@@ -31,19 +31,6 @@
     }
 }
 
-//Siparis adimlarindaki opsiyonel kontroller
-.page-basket-other{
-    //Siparis adimlari icin gizlenecek alanlari belirleyen class
-    .optionally-hidden{
-        display: none;
-    }
-    //Sepet ilk adımdaki grid siparis adımlarında eziliyor
-    .basket-grid{
-        display: block;
-    }
-}
-
-
 /*****Teslimat Sayfasi******/
 
 //Teslimat sayfası desktop yerlesim izgrasi

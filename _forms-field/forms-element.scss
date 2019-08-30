@@ -1,0 +1,19 @@
+input, textarea, select,
+.sStylerWrp_select .sStylerWrp{
+    width: 100%;
+    max-width: 330px;
+}
+.form-obj{
+    //Form field icin margin bottom kullanılmak istenmiyor ise .mb-0 class'ı kullanilmali
+    &.mb-0{
+        margin-bottom: 0;
+    }
+}
+textarea{
+    padding: 10px;
+    border: 1px solid #cecfd4 !important;
+    border-radius: 2px;
+    resize: none;
+    height: 90px;
+    max-width: 100%;
+}

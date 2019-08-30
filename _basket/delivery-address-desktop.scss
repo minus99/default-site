@@ -1,6 +1,7 @@
 //Teslimat adres grid row
 .grid-table-row-address{
     @extend .display-grid;
+    grid-auto-columns: minmax(0,200px) minmax(0,1fr) minmax(0,250px);
     grid-template-areas:"A B B D" "A C C D";
     grid-template-rows: minmax(0,auto);
     //Default verilen genislikler sabitleniyor
@@ -37,4 +38,25 @@
     padding-right: 8%;
     align-self: center;
     justify-self: end;
+}
+
+//Adress form sepete ozel hizalanıyor
+.page-basket{
+    .new-address{
+        display: table;
+        width: 100%;
+        max-width: 780px;
+        padding: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }    
+}
+//Adress form
+.new-address{
+    background: $colorWhite;
+    border-radius: $basketModuleRadius;
+    .form{
+        max-width: 680px;
+        margin-right: auto;
+    }
 }
