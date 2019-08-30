@@ -181,9 +181,7 @@ a.btnSipariseDon, a.btnSipIptal {
         color: $sipDetailBackBtnColor; 
         font-size: $sipDetailBackBtnSize;
         font-family: $sipDetailBackBtnFont;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
+        @extend .display-flex;
         align-items: center;  
     } 
 }

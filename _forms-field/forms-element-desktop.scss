@@ -4,4 +4,13 @@
     &-full{
         width: 100%;
     }
+    //ilk li'haric tumune border ekleniyor
+    &:not(.field-full){
+        &:nth-child(1){
+            padding-right: 10px;
+        }
+        &:nth-child(2){
+            padding-left: 10px;
+        }
+    }
 }
