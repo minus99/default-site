@@ -156,7 +156,7 @@ span[id$="lbfGNL_KAYITYOK"] {
     .member-general {
         padding: $padding15;
         background: $colorWhite; 
-        border-radius: $memberCornerRadius;
+        border-radius: 0;
     } 
     .page-top-title {
         font-size: $fontSize20;
@@ -169,6 +169,11 @@ span[id$="lbfGNL_KAYITYOK"] {
 /* Member Alternatif Button */
 
 a.btnSipariseDon {
+    margin-left: $sipShoppingMarginLeft;
+    margin-top: $sipShoppingMarginTop;
+}
+
+a.btnSipariseDon, a.btnSipIptal {
     background: none;
     width: auto;
     padding: 0; 

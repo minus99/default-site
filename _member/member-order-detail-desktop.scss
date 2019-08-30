@@ -1,1 +1,26 @@
- 
+// Sipariş detay içerik bilgileri
+.order-detail-info {
+    > div {
+        flex: 0 50%;
+        .text {
+            flex: 0 35%;
+        }
+    }
+    .act-btns {
+        > div {
+            margin-right:$sipDetailBtnMarginRight;
+        }
+    }
+}
+
+// Sipariş detay adres
+.order-detail-address {
+    > div {
+        flex: 1 50%; 
+    }
+    .order-address {
+        border-bottom: 0;
+        padding-bottom: 0;
+        margin-bottom: 0; 
+    }
+}

@@ -15,3 +15,14 @@
     }
 }
 
+/* Member Alternatif Button */
+a.btnSipariseDon {
+    margin: 0;
+}
+
+// Üyelik genel sayfa yapısı
+.member-grid{
+    .member-general {
+        border-radius: $memberCornerRadius;
+    } 
+}

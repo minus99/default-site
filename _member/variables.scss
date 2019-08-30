@@ -6,7 +6,7 @@ $memberPagePadding: 30px 0;
 
 //Üyelik sayfası boşluklar
 $padding20: 20px;
-$padding15: 15px;
+$padding15: 20px 15px;
 
 //Üyelik sayfası renkler
 $colorWhite: #fff; 
@@ -93,14 +93,36 @@ $orderBottomPadding: 20px;
 $orderBottomMargin: 20px;
 
 // Sipariş detay sayfası
-$sipDetailNumFontSize: 20px;
+$sipDetailNumFontSize: 20px; 
 $sipDetailNumMarginBottom: 30px; 
 $sipDetailNumDark: #202020;
 $sipDetailNumGray: #696b71; 
 $sipDetailBackBtnColor: #696b71;
 $sipDetailBackBtnSize: 14px;
 $sipDetailBackBtnFont: 'regular';  
-$sipDetailBorderColor: #f3f3f7;   
+$sipDetailBorderColor: #f3f3f7; 
+$sipDetailBtnMarginRight: 30px; 
+$sipDeliveryTitleColor: #202020;
+$sipDeliveryTitleFont: 'bold'; 
+$sipDeliveryLineHeight: 18px; 
+$sipShoppingFont: 14px; 
+$sipShoppingSmallFont: 12px; 
+$sipShoppingLineHeight: 18px;
+$sipShoppingColor: #202020;
+$sipShoppingPriceFont: 16px; 
+$sipShoppingPriceSize: 'bold';
+$sipShoppingMarginTop: 20px;
+$sipShoppingMarginRight: 20px;
+$sipShoppingMarginLeft: 20px;
+$sipShoppingMarginBottom: 20px;
+$sipShoppingPaddingBottom: 20px;
+$sipShoppingPaddingLeft: 20px;
+$sipPaymentMarginBottom: 10px;
+
+// Sipariş iptal ve iade
+$sipRefundMargin5: 5px;
+$sipRefundMargin10: 10px;
+$sipRefundMargin20: 20px;
 
 
 

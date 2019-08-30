@@ -1,29 +1,25 @@
+// --- SİPARİŞ DETAY --- //
+
 // Sipariş detay içerik bilgileri
-.order-detail-info {
-    display: flex;
-    display: -webkit-flex;
+.order-detail-info { 
     flex-wrap: wrap; 
     > div {
-        flex: 1 50%; 
-        display: flex;
-        display: -webkit-flex;
-        margin-bottom: 15px;
-        > div {
-            display: flex;
-            display: -webkit-flex;
-        }
+        flex: 100%; 
+        margin-bottom: 15px;  
         .text {
             color: $sipDetailNumGray; 
-            flex: 0 35%; 
+            flex: 0 50%; 
             padding-right: 10px;
         }
         .value {
             font-family: $medium;
             color: $sipDetailNumDark; 
         }
+        &.full-flex {
+            flex: 1 100%;
+        }
     } 
     .no {  
-        flex: 1 100%; 
         font-size: $sipDetailNumFontSize; 
         margin-bottom: $sipDetailNumMarginBottom;
         margin-bottom: 30px;
@@ -40,15 +36,156 @@
         border-top: 1px solid $sipDetailBorderColor;
         margin-bottom: 0; 
         padding-top: 15px; 
+        flex: 1 100%;
+        flex-wrap: wrap;
+        > div {
+            margin-right:$sipShoppingMarginRight;
+        }
     }
 }
 
 // Sipariş detay adres
 .order-detail-address {
-    display: flex;
-    display: -webkit-flex;
-    display: -ms-flexbox;
+    flex-wrap: wrap; 
+    > div {
+        flex: 1 100%;
+        padding-right: 20px;
+        &:last-child {
+            border-bottom: 0;
+            padding-bottom: 0;
+            margin-bottom: 0; 
+        }
+    }
+    .order-address {
+        border-bottom:1px solid $sipDetailBorderColor;
+        padding-bottom: $sipShoppingMarginBottom;
+        margin-bottom: $sipShoppingPaddingBottom; 
+    }
     .page-top-title {
         flex: 1 100%;
+    }
+    .text {
+        color: $sipDeliveryTitleColor;
+        font-family: $sipDeliveryTitleFont;
+        margin-bottom: 10px; 
+    }
+    .value {
+        line-height: $sipDeliveryLineHeight;
+    }
+}
+
+// Sipariş detay sepet
+.grid-table-cart {
+    .grid-row {
+        border-bottom:1px solid $sipDetailBorderColor;
+        padding-bottom: $sipShoppingMarginBottom;
+        margin-bottom: $sipShoppingPaddingBottom; 
+        &:last-child {
+            margin: 0;
+            padding: 0;
+            border: 0;
+        } 
+        > div {
+            &:empty {
+                display: none;
+            }
+        }
+        .grid-name {
+            a {
+                font-size: $sipShoppingFont; 
+                line-height: $sipShoppingLineHeight;
+                color: $sipShoppingColor; 
+            }
+        }
+        .col1 {
+            margin-right: $sipShoppingMarginRight; 
+            a {
+                display: inline-block; 
+                img {
+                    width: 100%;
+                    max-width: 100px; 
+                }
+            }
+        }
+        .col2 {
+            flex-direction: column;
+            > div {
+                margin-bottom: 5px;
+            }
+        }
+        .grid-piece {
+            color: $sipDetailNumGray;
+            font-size: $sipShoppingSmallFont;
+        }
+        .grid-price {
+            span {
+                font-size: $sipShoppingPriceFont;
+                font-family: $sipShoppingPriceSize;
+            }
+        }
+    }
+}
+
+// Sipariş Sonuç
+.order-detail-info-payment {
+    .pnlDipToplamTable {
+        flex-direction: column;
+        > div {
+            .text { 
+                &:empty {display: none;}
+                float: left;
+                margin-bottom: $sipPaymentMarginBottom;
+            }
+            .value {
+                &:empty {display: none;} 
+                float: right;
+                margin-bottom: $sipPaymentMarginBottom;
+            }
+            &.total {
+                font-family: $bold;
+            }
+            &.discount {
+                color: $colorRed;
+            }
+            &:last-child {
+                > div {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+// --- SİPARİŞ DETAY İPTAL VE İADE --- //
+
+// Sipariş detay iptal
+
+.member-refund-request {
+    .grid-row {
+        border-top: 1px solid $sipDetailBorderColor; 
+        padding-top: $sipShoppingMarginBottom;
+        margin-top: $sipShoppingPaddingBottom; 
+        border-bottom: 0;  
+        padding-bottom: 0;
+        margin-bottom: 0;  
+        &:last-child {
+            border-top: 1px solid $sipDetailBorderColor; 
+            padding-top: $sipShoppingMarginBottom;
+            margin-top: $sipShoppingPaddingBottom; 
+            border-bottom: 1px solid $sipDetailBorderColor; 
+            padding-bottom: $sipShoppingMarginBottom;
+            margin-bottom: $sipShoppingPaddingBottom; 
+        }
+        .grid-piece {
+            .sStylerMainWrp {
+                margin-right: $sipRefundMargin5;
+            }
+        }
+    }
+    .field-submit {
+        margin-top: $sipRefundMargin20; 
+        .form-obj {
+            margin-right: $sipRefundMargin10;
+        }
     }
 }
