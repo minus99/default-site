@@ -31,10 +31,8 @@
     }
 }
 
-/*****Teslimat Sayfasi******/
-
-//Teslimat sayfası desktop yerlesim izgrasi
-.delivery-grid{
+//Siparsi adimlari sayfa izgarasi
+.basket-grid-2{
     grid-template-columns: minmax(0,3%) minmax(0,33%) minmax(0,33%) minmax(0,33%) minmax(0,3%);
     grid-template-areas: ". AAA AAA BBB .";
     padding-bottom: 30px;

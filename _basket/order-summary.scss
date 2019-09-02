@@ -142,7 +142,9 @@
             }
             //Siparis ozet gizlenen satırlar
             &.pnlDipToplam_indirimliAraToplam,
-            &.pnlDipToplam_kargoHaricToplam {
+            &.pnlDipToplam_kargoHaricToplam,
+            &.pnlDipToplam_kulBankaBonus,
+            &.pnlDipToplam_bankaKomisyon{
                 @extend .none;
             }
         }

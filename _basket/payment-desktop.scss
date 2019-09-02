@@ -1,0 +1,14 @@
+.pay-type-list{
+    width: calc(100% - 20% * 1);
+    ul{
+        li{
+            a{
+                font-size: $fontSize16;
+            }
+        }
+    }
+}
+//Odeme modulu
+.pay-type-content{
+    border-radius: $basketModuleRadius;
+}

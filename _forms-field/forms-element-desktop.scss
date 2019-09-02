@@ -5,7 +5,7 @@
         width: 100%;
     }
     //ilk li'haric tumune border ekleniyor
-    &:not(.field-full){
+    &:not(&-full){
         &:nth-child(1){
             padding-right: 10px;
         }

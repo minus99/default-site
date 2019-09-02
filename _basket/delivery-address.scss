@@ -51,3 +51,37 @@
         flex-wrap: wrap;
     }
 }
+//Kurumsal secim icin duzenleme
+div.kurumsal{
+    .field{
+        &.tcCheck{
+            .form-obj{
+                @extend .mb-0;
+            }
+        }
+    }
+}
+//Bireysel secim icin duzenleme
+div.bireysel{
+    .field{
+        &.tcCheck-2{
+            .form-obj{
+                margin-bottom: 5px;
+            }
+        }
+    }
+}
+
+//Adres tip secimi
+div[id$="plhAdresTipi"]{
+    > a{
+        @extend .inline-block;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        margin-bottom: 13px;
+        //Ilk elemean icin sagdan bosluk veriliyor
+        &:first-child{
+            margin-right: 40px;
+        }
+    }
+}

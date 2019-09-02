@@ -2,6 +2,14 @@ input, textarea, select,
 .sStylerWrp_select .sStylerWrp{
     width: 100%;
 }
+//Flex icin wrap ozelligi belirleniyor
+.flex-field-wrap{
+    flex-wrap: wrap;
+}
+//Forms field icin genislikler belirleniyor
+.field{
+    width: 100%;
+}
 .form-obj{
     //Form field icin margin bottom kullanılmak istenmiyor ise .mb-0 class'ı kullanilmali
     &.mb-0{

@@ -1,0 +1,56 @@
+//Odeme sayfasi odeme tipi modulu
+.pay-type-list{
+    ul{
+        //flex default class extend ediliyor
+        @extend .display-flex;
+        //esit genislik
+        li{
+            flex: 1;
+            width: 25%;
+            a{
+                @extend .display-block;
+                background: $colorBulltet;
+                border-radius: 4px 4px 0 0;
+                font-size: $fontSize12;
+                font-family: $medium;
+                padding:15px 20px;
+                text-align: $alignCenter;
+                //secili arka plan
+                &.emos_selected{
+                    background: $colorWhite;
+                }
+            }
+        }
+    }
+}
+//Odeme modulu
+.pay-type-content{
+    background: $colorWhite;
+    padding: 20px;
+}
+//K Karti modulu
+.tableOdemeBilgiKrediKarti{
+    > tbody{
+        > tr{
+            > th, td{
+                @extend .display-block;
+                text-align: $alignLeft;
+            }
+            > th{
+                span{
+                    color: $colorAlternate;
+                }
+            }
+        }
+    }
+    //Sistem kart numarasi input genisligi eziliyor
+    .cc-numkeypad{
+        width: 100% !important;
+    }
+}
+//K Krati hata mesaji icin alttan bosluk
+.tableTitleOdemeBilgiKrediKarti{
+    .message {
+        margin-bottom: 25px;
+    }
+}

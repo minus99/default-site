@@ -90,7 +90,8 @@ Site General Flex Class Items
     border-bottom-width: 1px;
     border-style: solid;
     text-align: left;
-    padding: 20px;  
+    padding:11px 20px 9px 20px;
+    line-height: 20px;
     //Eğer HTML bos ise alan gizleniyor
     &:empty{
         @extend .none;
