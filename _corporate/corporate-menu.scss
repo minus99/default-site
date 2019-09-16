@@ -1,0 +1,10 @@
+ // --- KURUMSAL SOL MENÜ -- //
+
+.kutuSolMenuTree {
+    .sev2 {
+        > a {
+            font-family: $memberFontBold;
+            font-size: $memberFontSize20; 
+        }
+    } 
+}

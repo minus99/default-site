@@ -78,11 +78,15 @@ $colorRed:#e72f2f;
 $colorDefault: #202020;
 $colorAlternate: #696b71;
 $colorBulltet:#cecfd4;
+$colorYellow: #ffea86;
 $errorBgColor:#ffcaca;
+$sucessBgColor: #C8FFD5;
+$sucessBorder: #18C641; 
 $gridRowBorder: #f3f3f7;
 
-/*Site varsayılan yazı boyutlari*/
 
+
+/*Site varsayılan yazı boyutlari*/
 //--10px
 $fontSize10:10px;
 
@@ -97,6 +101,12 @@ $fontSize16:16px;
 
 //--20px
 $fontSize20:20px;
+
+//--22px
+$fontSize22:22px;
+
+//--24px
+$fontSize24:24px;
 
 /*Border Radius*/
 $borderRadius: 100%;

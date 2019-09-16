@@ -3,126 +3,187 @@
     background: $colorWhite;
 }
 //Sepet tablo grid'i
-.grid-table-row {
-    padding: 20px 15px;
-    @extend .display-flex;
-    @extend .relative;
-
-    //Sepet tablo satır image kolonu sabitleniyor
-    .grid-img{
-        width: 90px;
-        img{
-            max-width: 120px;
-        }
+.grid-table-cart{
+    //Sepet rows
+    .grid-table-rows{
+        padding-left:15px;
+        padding-right:15px;
     }
-    //Sepet tablo urun satırı image sabit tutulup kolon akisa alınıyor
-    .grid-content{
-        width: calc(100% - 90px);
-        padding-left: 10px;
-    }
-    //Sepet tablo urun marka adi
-    .grid-brand{
-        color: $colorAlternate;
-        font-size: $fontSize12;
-        line-height: $gridLineHghtDefault;
-    }
-    .grid-name{
-        //Urun adı linki genel css'i
-        > a{
-            font-size: $fontSize14;
-            line-height: $gridLineHghtDefault;
-            color: $colorDefault;
-        }
-        span[id$="lblProm"]{
-            //Eger kampanya yoksa o alan gizleniyor
-            &:empty{
-                display: none;
-            }
-            //Kampanya alanı genel css düzenlemesi
-            *{
-                color: $colorAlternate;
-                font-size: $fontSize12;
-            }
-            //Kampanya alanı HTML'i
-            > ul
-            {
-                //Kampanya alanı satır yukselik
-                line-height: $gridLineHghtDefault;
-                //Kampanya alanı ust bosluk
-                margin-top: 5px;
-            }
-        }
-    }
-    //Abonelik periyot sure HTML alanı
-    .abonelikUrun{
-        //Eger icerik bos ise
-        &:empty{
-            @extend .none;
-        }
-
-        //Site ortak class olan flex class'i extend ediliyor
+    .grid-table-row {
         @extend .display-flex;
-        @extend .align-items-center;
-        li{
-            //sepet abonelik metinleri icin ozellestirme
+        @extend .relative;
+        padding-bottom: 20px;
+        &:not(:nth-child(2)){   
+            border-top:1px solid $gridRowBorder;
+            padding-top: 20px;    
+        }
+        //Sepet tablo satır image kolonu sabitleniyor
+        .grid-img{
+            width: 90px;
+            img{
+                max-width: 120px;
+            }
+        }
+        //Sepet tablo urun satırı image sabit tutulup kolon akisa alınıyor
+        .grid-content{
+            width: calc(100% - 90px);
+            padding-left: 10px;
+            > div{
+                display: block;
+            }
+            //Sag kolon
+            &-right{
+                @extend .display-flex;
+                @extend .align-items-center;
+                margin-top: 10px;
+            }
+        }
+        //Sepet tablo urun marka adi
+        .grid-brand{
             color: $colorAlternate;
             font-size: $fontSize12;
             line-height: $gridLineHghtDefault;
         }
-    }
-    //Urun fiyatlari
-    .grid-price{
-        // TL simgesi font duzenleme
-        .pb1{
-            font-family: cursive;
+        .grid-name{
+            //Urun adı linki genel css'i
+            > a{
+                font-size: $fontSize14;
+                line-height: $gridLineHghtDefault;
+                color: $colorDefault;
+            }
+            span[id$="lblProm"]{
+                //Eger kampanya yoksa o alan gizleniyor
+                &:empty{
+                    display: none;
+                }
+                //Kampanya alanı genel css düzenlemesi
+                *{
+                    color: $colorAlternate;
+                    font-size: $fontSize12;
+                }
+                //Kampanya alanı HTML'i
+                > ul
+                {
+                    //Kampanya alanı satır yukselik
+                    line-height: $gridLineHghtDefault;
+                    //Kampanya alanı ust bosluk
+                    margin-top: 5px;
+                }
+            }
         }
-    }
-    span[id$="lblURN_INDIRIMLIFIYAT"],
-    .gridSepetListe_gercekFiyat{
-        font-size: $fontSize14;
-    }
-    //Varsayılan fiyat
-    span[id$="lblURN_INDIRIMLIFIYAT"]{
-        order: 1; // sıralama veriliyor
-        font-family: $bold;
-    }
-    // Ilk fiyat    
-    .gridSepetListe_gercekFiyat{
-        order: 2; // sıralama veriliyor 
-        font-family: $medium;
-        color: $colorAlternate;
-        text-decoration: $linkLineThrough;
-    }
-    //satis fiyat
-    .satBrFiyatVrg{
-        margin-right: 10px;
-    }
-    //sepet icin urun fiyatlari gizlenen alanlar
-    .brFiyat,
-    .satBrFiyat {display: none !important;}
+        //Abonelik periyot sure HTML alanı
+        .grid-sbrc-lbl{
+            > span{
+                font-size: $fontSize10;
+                color: $colorRed;
+            }
+        }
+        .abonelikUrun{
+            //Eger icerik bos ise
+            &:empty{
+                @extend .none;
+            }
 
-    //sepet icin urun fiyatlari acilan alanlar
-    .brFiyatVrg,
-    .satBrFiyatVrg{
-        display: inline-flex !important;
-    }
-    //sepet urun silme
-    .grid-remove{
-        > a{
-            @extend .inline-block;
-            @extend a.btnLink;
+            //Site ortak class olan flex class'i extend ediliyor
+            @extend .display-flex;
+            @extend .align-items-center;
+            li{
+                //sepet abonelik metinleri icin ozellestirme
+                color: $colorAlternate;
+                font-size: $fontSize12;
+                line-height: $gridLineHghtDefault;
+            }
         }
-    } 
-    //Indirim oranı
-    .dvSepetKazancOran{
-        display: inline-flex !important;
-        margin-top: 5px;
-        // Eger bos ise gizleniyor
-        &:empty{
-            @extend .none;
+        //Urun adet kontrol
+        .grid-piece{
+            flex: 1;
+            padding-right: 10px;
+            //input arttima ve eksiltme butonlari
+            a{
+                display: none;
+            }
+            input[type="text"]{
+                background: #f3f3f7;
+                border: none;
+                padding: 10px;
+            }
         }
-        .amount{
-            color: $colorRed;
+        //Urun fiyatlari
+        .grid-price{
+            flex: 1;
+            // TL simgesi font duzenleme
+            .pb1{
+                font-family: cursive;
+            }
+            .price-wrapper{
+                flex-wrap: wrap;
+            }
+        }
+        span[id$="lblURN_INDIRIMLIFIYAT"],
+        .gridSepetListe_gercekFiyat{
+            font-size: $fontSize14;
+        }
+        //Varsayılan fiyat
+        span[id$="lblURN_INDIRIMLIFIYAT"]{
+            order: 1; // sıralama veriliyor
+            font-family: $bold;
+        }
+        // Ilk fiyat    
+        .gridSepetListe_gercekFiyat{
+            order: 2; // sıralama veriliyor 
+            font-family: $medium;
+            color: $colorAlternate;
+            text-decoration: $linkLineThrough;
+        }
+        //satis fiyat
+        .satBrFiyatVrg{
+            margin-right: 10px;
+        }
+        //sepet icin urun fiyatlari gizlenen alanlar
+        .brFiyat,
+        .satBrFiyat {display: none !important;}
+
+        //sepet icin urun fiyatlari acilan alanlar
+        .brFiyatVrg,
+        .satBrFiyatVrg{
+            display: inline-flex !important;
+        }
+        //sepet urun silme
+        .grid-remove{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            > a{
+                @extend .inline-block;
+                @extend a.btnLink;
+                padding: 5px;
+            }
+        } 
+        //Indirim oranı
+        .dvSepetKazancOran{
+            display: inline-flex;
+            margin-top: 5px;
+            // Eger bos ise gizleniyor
+            &:empty{
+                @extend .none;
+            }
+            .amount{
+                color: $colorRed;
+            }
+        }
+        //Abonelikli urun varsa fiyat ozellestiriliyor
+        &.abonelikUrun{
+            .dvSepetKazancOran{
+                display: none;
+            }
+            .grid-price{
+                padding: 5px;
+                border-radius: 2px;
+                background-color: rgba(231, 47, 47, 0.2);
+            }
+            .satBrFiyatVrg{
+                color: $colorRed;
+            }
         }
     }
 }
@@ -175,5 +236,15 @@
         @extend .message;
         @extend .message-error;
         margin-bottom: 30px;
+    }
+}
+
+//Sepet adimlari sepet onizleme grid yapisi
+.basket-grid-2{
+    .grid-table-cart{
+        //Siparis adimlarin da sepet onizleme gizlenen alanlar
+        .grid-piece,
+        .grid-remove,
+        span[id$="lblProm"]{display: none;}
     }
 }

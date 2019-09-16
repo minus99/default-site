@@ -2,7 +2,7 @@
 .basket-swiper{
     //Sepet ust slider slide
     .swiper-slide{
-        width: (100% / 1.3);
+        width: 93%;
         background-color: $colorWhite;
     }
     //Sepet ust slider icerik
@@ -12,7 +12,7 @@
         border-radius: $basketModuleRadius;
         .image{
             width: 90px;
-            margin-right: 15px;
+            margin-right: 10px;
             img{
                 max-width: 120px;
             }
@@ -52,6 +52,7 @@
     //Sepet üst slider sag ve sol oklar
     .swiper-button-prev,
     .swiper-button-next{
+        display: none;
         margin-top: $basketSwiperArrowTop;
     }
     //Sepet ust slider bullet
@@ -61,6 +62,10 @@
         //Varsayilan class gorunumu
         &-bullet{
             background: $colorBulltet;
+            width: 6px;
+            height: 6px;
+            margin-left: 3px;
+            margin-right: 3px;
         }
         //Aktif class gorunumu
         &-bullet-active{
@@ -68,8 +73,32 @@
         }
     }
 }
+//Sepet widget
+.swiper-product{
+    padding-bottom: 50px;
+    .swiper-inner{
+        margin-left: -30px;
+    }
+    .swiper-slide{
+        width: calc(100% / 2);
+        padding-left: 30px;
+    }
+}
+.swiper-button-next-static{
+    margin-left: 14px;
+}
+.swiper-button-prev-static{
+    margin-right: 14px;
+}
+.swiper-button-prev-static,
+.swiper-button-next-static{
+    position: relative;
+    left: inherit;
+    right: inherit;
+    margin-top: 0;
+}
 
-//Teslimat ust slider -- sepet de gelen slider siparis adimlarında tekrar duzenleniyor
+//Teslimat --- sepet de gelen slider siparis adimlarında tekrar duzenleniyor
 .page-basket-other{
     //3'lu slider 
     .basket-swiper{

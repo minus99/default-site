@@ -7,11 +7,16 @@
     div.types{
         padding: 15px;
         .image{
-            width: 120px;
+            width: 100px;
         }
         .detail{
             width: calc(100% - 120px);
         }
+    }
+    //Sepet üst slider sag ve sol oklar desktop acılıyor
+    .swiper-button-next,
+    .swiper-button-prev{
+        display: block;
     }
     //Sepet ust slider ileri button
     .swiper-button-next{
@@ -24,9 +29,19 @@
     //Sepet ust slider bullet
     .swiper-pagination {
         margin-top: $basketSwiperBulletTopSpaceDt;
+        //Varsayilan class gorunumu
+        &-bullet{
+            width: 8px;
+            height: 8px;
+        }
     }
 }
-
+//Sepet widget
+.swiper-product{
+    .prd{
+        width: calc(100% / 5);
+    }
+}
 //Teslimat sayfası ust slider ozellestirme
 .order-delivery {
     .basket-swiper{

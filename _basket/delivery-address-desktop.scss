@@ -17,11 +17,17 @@
     grid-area: B;
     align-self: flex-start;
     width: 100%;
+    margin-top: 0;
 }
 //Teslimat adres butonları
 .grid-address-buttons{
-    grid-area: C;
+    //Mobile css resetleniyor
+    position: inherit;
+    top: inherit;
+    right: inherit;
     width: 100%;
+
+    grid-area: C;
     //Sola hizlama default class eziliyor
     .justify-end{
         justify-content: flex-start;
@@ -38,6 +44,7 @@
     padding-right: 8%;
     align-self: center;
     justify-self: end;
+    margin-top: 0;
 }
 
 //Adress form sepete ozel hizalanıyor
@@ -49,14 +56,13 @@
         padding: 20px;
         margin-left: auto;
         margin-right: auto;
+        border-radius: $basketModuleRadius;
     }    
 }
-//Adress form
-.new-address{
-    background: $colorWhite;
-    border-radius: $basketModuleRadius;
-    .form{
-        max-width: 680px;
-        margin-right: auto;
+//Magazadan teslim
+.magazadanTeslim {
+    > a{
+        font-size: $fontSize16;
+        padding: 14px 20px;
     }
 }

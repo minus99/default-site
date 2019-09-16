@@ -1,17 +1,14 @@
+// --- ÜYE SAYFASI SİPARİŞLERİM -- //
 .member-order {
     a {
-        color: $orderTextColorDark;
+        color: $memberDarkColor;
     }
     
     // Siparişlerim Liste
     .grid-row {
-        display: flex;
-        display: -webkit-flex; 
-        justify-content: space-between;
-        border-bottom: 1px solid $orderBorderColor; 
-        padding-bottom: $orderBottomPadding;
-        margin-bottom: $orderBottomMargin;
-        align-items: start;
+        border-bottom: 1px solid $memberLightGreyColor; 
+        padding-bottom: $memberPadding20;
+        margin-bottom: $memberMargin20;
         flex-wrap: wrap;
         > div:empty {display: none !important;}
         > div {
@@ -41,13 +38,13 @@
             flex:1 100%; 
             margin-top: 5px;
             a {
-                color: $orderTextColorGray;
+                color: $memberGreyColor;
             }
         } 
     }
     .grid-total {
         font-family: $bold;
-        font-size: $orderPriceSize;
+        font-size: $memberFontSize16;
         text-align: right;
         flex: 1 30%;
     }
@@ -62,8 +59,8 @@
         text-align: right;
         margin-top: 15px;
         a {
-            color: $orderTextColorBlue;
-            --color1:  $orderTextColorBlue;
+            color: $memberBlueColor;
+            --color1:  $memberBlueColor;
             font-family: $medium;
             line-height: 30px;  
         }

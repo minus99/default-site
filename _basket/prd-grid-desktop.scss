@@ -3,34 +3,88 @@
     border-radius: $basketModuleRadius;
 }
 //Sepet tablo grid'i
-.grid-table-row {
-    padding-left: 20px;
-    padding-right: 20px;
-    //Sepet tablo satır image kolonu sabitleniyor
-    .grid-img{
-        width: 120px;
+.grid-table-cart{
+    .grid-table-rows{
+        padding-left: 20px;
+        padding-right: 20px;
     }
-    //Sepet tablo urun satırı image sabit tutulup kolon akisa alınıyor
-    .grid-content{
-        width: calc(100% - 120px);
-        //Sol kolon
-        &-left{
-            width: calc(100% - 20%);
+    .grid-table-row {
+        //Sepet tablo satır image kolonu sabitleniyor
+        .grid-img{
+            width: 120px;
         }
-        //Sag kolon
-        &-right{
-            width:20%;
+        //Sepet tablo urun satırı image sabit tutulup kolon akisa alınıyor
+        .grid-content{
+            width: calc(100% - 120px);
+            //Sol kolon
+            &-left{
+                min-width: calc(100% - 25%);
+            }
+            //Sag kolon
+            &-right{
+                display: block;
+                min-width:25%;
+                margin-top: 0;
+            }
+            > div{
+                @extend .d-flex;
+            }
         }
-    }
-    //Urun fiyatlari
-    span[id$="lblURN_INDIRIMLIFIYAT"],
-    .gridSepetListe_gercekFiyat{
-        font-size: $fontSize16;
-    }
-    //sepet urun silme desktop ozel ust margin
-    .grid-remove{
-        > a{
+        //Urun adet kontrol
+        .grid-piece{
+            padding-right: 0;
+            input[type="text"]{
+                max-width: 130px;
+            }
+        }
+        //Urun fiyatlari
+        .grid-price{
+            max-width: 200px;
             margin-top: 10px;
+        }
+        //Urun fiyatlari
+        span[id$="lblURN_INDIRIMLIFIYAT"],
+        .gridSepetListe_gercekFiyat{
+            font-size: $fontSize16;
+        }
+        //sepet urun silme desktop ozel ust margin
+        .grid-remove{
+            position: inherit;
+            top: inherit;
+            right: inherit;
+            > a{
+                margin-top: 10px;
+                padding: 0;
+            }
+        }
+    }
+}
+
+//Sepet adimlari sepet onizleme grid yapisi
+.basket-grid-2{
+    .grid-table-cart{
+        .grid-table-row{
+            //Sepet tablo row padding resetleniyor
+            padding: 15px 0;
+            .grid-price{
+                max-width: inherit;
+                display: inline-block;
+            }
+        }    
+        //Sepet tablo satır image kolonu sabitleniyor
+        .grid-img{
+            width: 100px;
+        }
+        .grid-content{
+            width: calc(100% - 100px);
+            //Sol kolon ve sol kolon
+            &-left,
+            &-right{
+                width: auto;
+            }
+            > div{
+                display: block;
+            }
         }
     }
 }

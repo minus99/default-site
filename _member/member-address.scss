@@ -1,4 +1,4 @@
-.grid-default-address {
+/*.grid-default-address {
     .grid-adress-row {
         grid-template-columns: 1fr 70%;  
         grid-template-rows: minmax(0, auto); 
@@ -9,8 +9,8 @@
         ;
         column-gap: 20px;
         border-bottom: 1px solid $borderColor;
-        margin-bottom: $addressBtnMarginBottom; 
-        padding-bottom: $addressBtnPaddingBottom; 
+        margin-bottom: $memberMargin20; 
+        padding-bottom: $memberPadding20; 
         &:last-child {
             padding: 0;
             margin: 0;
@@ -18,21 +18,21 @@
         }
     }
     .grid-address-name {
-        font-family: $addressTitleFont;
-        font-size: $addressTitleColor;
-        line-height: $addressTypeLineHeight;
+        font-family: $memberFontBold;
+        font-size: $memberFontSize16;
+        line-height: $memberLineHeight;
         span {
             display: block;
-            font-family: $addressTypeFont;
-            font-size: $addressTypeFontSize;
-            color: $addressTypeColor;
+            font-family: $memberFontRegular;
+            font-size: $memberFontSize12;
+            color: $memberGreyColor;
         }
     }
     .grid-address {
-        font-family: $addressFont;
-        font-size: $addressFontSize;
-        color: $addressColor;
-        line-height: $addressLineHeight; 
+        font-family: $memberFontRegular;
+        font-size: $memberFontSize14;
+        color: $memberDarkColor;
+        line-height: $memberLineHeight; 
     }
 
     .grid-address-select:empty {display: none;}
@@ -42,18 +42,18 @@
             display:inline-block;
             width: auto; 
             background: none;  
-            color: $addressBtnColor; 
-            font-family: $addressBtnFont;
-            font-size: $addressBtnFontSize;
-            line-height: $addressBtnLineHeight;
-            text-decoration: $addressBtnDecoration; 
+            color: $memberGreyColor; 
+            font-family: $memberFontRegular;
+            font-size: $memberFontSize12;
+            line-height: $memberLineHeight;
+            text-decoration: $memberDecUnderline; 
             padding: 0;
-            margin-right: $addressBtnMarginRight;
+            margin-right: $memberMargin20;
             span {
-                color: $addressBtnColor; 
-                font-size: $addressBtnFontSize;
-                font-family: $addressBtnFont;
+                color: $memberGreyColor; 
+                font-size: $memberFontSize12;
+                font-family: $memberFontRegular;
             }
         }
     }
-}
+}*/

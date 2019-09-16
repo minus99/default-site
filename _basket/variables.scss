@@ -61,6 +61,12 @@ $step-bottom-spacing:10px;
 //Siparis adımları basliklar
 $orderGridTitlePdng:20px;
 
+//Siparis ozet mobile ust bosluk
+$orderSummaryMbTopSpc: 30px;
+
+//Siparis ozet desktop ust bosluk
+$orderSummaryDtTopSpc: 0;
+
 //Siparis ozet arka plan
 $orderSummaryBg: #ffffff;
 
@@ -69,6 +75,9 @@ $orderSummaryMarginBottomDesktop:50px;
 
 //Siparis ozet ic bosluk
 $orderSummaryPadding:20px;
+
+//Siparis ozet ic alt bosluk
+$orderSummaryBttmPadding:70px;
 
 //Siparis ozet baslik
 $orderSummaryTitle:20px;

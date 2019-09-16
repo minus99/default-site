@@ -11,6 +11,7 @@
     }
     //Content alani
     &-wrp{
+        display: none;
         width: calc(100% - 15%);
         padding-left:15px;
         padding-right:15px;
@@ -31,6 +32,14 @@
             max-width: 450px;
             resize: none;
             height: 60px;
+            padding-right: 15px;
+            border: none !important;
+        }
+    }
+    //Hediye paketi isaretli ise
+    &-opened{
+        .gift-tab-wrp{
+            display: block;
         }
     }
 }

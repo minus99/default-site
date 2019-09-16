@@ -7,24 +7,27 @@
         flex: 100%; 
         margin-bottom: 15px;  
         .text {
-            color: $sipDetailNumGray; 
+            color: $memberGreyColor; 
             flex: 0 50%; 
             padding-right: 10px;
         }
         .value {
             font-family: $medium;
-            color: $sipDetailNumDark; 
+            color: $memberDarkColor; 
+            &#plhParaBr {
+                font-family: cursive; 
+            }
         }
         &.full-flex {
             flex: 1 100%;
         }
     } 
     .no {  
-        font-size: $sipDetailNumFontSize; 
-        margin-bottom: $sipDetailNumMarginBottom;
+        font-size: $memberFontSize20; 
+        margin-bottom: $memberMargin30;
         margin-bottom: 30px;
         .text {
-            color: $sipDetailNumDark;
+            color: $memberDarkColor;
             flex: none;
         }
         .value {
@@ -33,15 +36,21 @@
         }   
     }
     .act-btns {
-        border-top: 1px solid $sipDetailBorderColor;
+        border-top: 1px solid $memberLightGreyColor;
         margin-bottom: 0; 
         padding-top: 15px; 
         flex: 1 100%;
         flex-wrap: wrap;
         > div {
-            margin-right:$sipShoppingMarginRight;
+            margin-right:$memberMargin20;
+        }
+        #plhSipTekrarla {
+            a {
+                color: $memberBlueColor;
+            }
         }
     }
+    
 }
 
 // Sipariş detay adres
@@ -57,29 +66,29 @@
         }
     }
     .order-address {
-        border-bottom:1px solid $sipDetailBorderColor;
-        padding-bottom: $sipShoppingMarginBottom;
-        margin-bottom: $sipShoppingPaddingBottom; 
+        border-bottom:1px solid $memberLightGreyColor;
+        padding-bottom: $memberPadding20;
+        margin-bottom: $memberMargin20; 
     }
     .page-top-title {
         flex: 1 100%;
     }
     .text {
-        color: $sipDeliveryTitleColor;
-        font-family: $sipDeliveryTitleFont;
-        margin-bottom: 10px; 
+        color: $memberDarkColor;
+        font-family: $memberFontBold;
+        margin-bottom: 10px;  
     }
     .value {
-        line-height: $sipDeliveryLineHeight;
+        line-height: $labelLineText;
     }
 }
 
 // Sipariş detay sepet
 .grid-table-cart {
     .grid-row {
-        border-bottom:1px solid $sipDetailBorderColor;
-        padding-bottom: $sipShoppingMarginBottom;
-        margin-bottom: $sipShoppingPaddingBottom; 
+        border-bottom:1px solid $memberLightGreyColor;
+        padding-bottom: $memberPadding20;
+        margin-bottom: $memberMargin20; 
         &:last-child {
             margin: 0;
             padding: 0;
@@ -92,13 +101,14 @@
         }
         .grid-name {
             a {
-                font-size: $sipShoppingFont; 
-                line-height: $sipShoppingLineHeight;
-                color: $sipShoppingColor; 
+                font-size: $memberFontSize14; 
+                font-family: $medium;
+                line-height: $memberLineHeight; 
+                color: $memberDarkColor; 
             }
         }
-        .col1 {
-            margin-right: $sipShoppingMarginRight; 
+        .ga1 {
+            margin-right: $memberMargin20; 
             a {
                 display: inline-block; 
                 img {
@@ -107,21 +117,26 @@
                 }
             }
         }
-        .col2 {
-            flex-direction: column;
+        .ga2 {
+            flex-direction: column; 
+            align-items: normal;
             > div {
-                margin-bottom: 5px;
+                margin-bottom: $memberMargin10; 
+            }
+            .form-obj {
+                margin-bottom: 0; 
             }
         }
         .grid-piece {
-            color: $sipDetailNumGray;
-            font-size: $sipShoppingSmallFont;
+            color: $memberGreyColor;
+            font-size: $memberFontSize12;
         }
         .grid-price {
-            span {
-                font-size: $sipShoppingPriceFont;
-                font-family: $sipShoppingPriceSize;
-            }
+            font-size: $memberFontSize16;
+            font-family: $memberFontBold;
+        }
+        .brFiyat {
+            color: $memberGreyColor;
         }
     }
 }
@@ -134,12 +149,12 @@
             .text { 
                 &:empty {display: none;}
                 float: left;
-                margin-bottom: $sipPaymentMarginBottom;
+                margin-bottom: $memberMargin10;
             }
             .value {
                 &:empty {display: none;} 
                 float: right;
-                margin-bottom: $sipPaymentMarginBottom;
+                margin-bottom: $memberMargin10;
             }
             &.total {
                 font-family: $bold;
@@ -152,40 +167,6 @@
                     margin-bottom: 0;
                 }
             }
-        }
-    }
-}
-
-// --- SİPARİŞ DETAY İPTAL VE İADE --- //
-
-// Sipariş detay iptal
-
-.member-refund-request {
-    .grid-row {
-        border-top: 1px solid $sipDetailBorderColor; 
-        padding-top: $sipShoppingMarginBottom;
-        margin-top: $sipShoppingPaddingBottom; 
-        border-bottom: 0;  
-        padding-bottom: 0;
-        margin-bottom: 0;  
-        &:last-child {
-            border-top: 1px solid $sipDetailBorderColor; 
-            padding-top: $sipShoppingMarginBottom;
-            margin-top: $sipShoppingPaddingBottom; 
-            border-bottom: 1px solid $sipDetailBorderColor; 
-            padding-bottom: $sipShoppingMarginBottom;
-            margin-bottom: $sipShoppingPaddingBottom; 
-        }
-        .grid-piece {
-            .sStylerMainWrp {
-                margin-right: $sipRefundMargin5;
-            }
-        }
-    }
-    .field-submit {
-        margin-top: $sipRefundMargin20; 
-        .form-obj {
-            margin-right: $sipRefundMargin10;
         }
     }
 }

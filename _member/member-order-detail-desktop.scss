@@ -1,3 +1,5 @@
+// --- ÜYE SAYFASI SİPARİŞLERİM DETAY -- //
+
 // Sipariş detay içerik bilgileri
 .order-detail-info {
     > div {
@@ -8,7 +10,10 @@
     }
     .act-btns {
         > div {
-            margin-right:$sipDetailBtnMarginRight;
+            margin-right:$memberMargin30;
+            &:last-child {
+                margin-right: 0; 
+            }
         }
     }
 }
@@ -16,11 +21,22 @@
 // Sipariş detay adres
 .order-detail-address {
     > div {
-        flex: 1 50%; 
+        flex: 1 50%;
     }
     .order-address {
         border-bottom: 0;
         padding-bottom: 0;
         margin-bottom: 0; 
+    }
+}
+
+// Sipariş detay sepet
+.grid-table-cart {
+    .grid-row {
+        .ga2 {
+            flex: 1;
+            flex-direction: row;
+            align-items: center;
+        }
     }
 }

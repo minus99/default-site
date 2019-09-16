@@ -69,10 +69,16 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
     width:100%;
+    tr th{
+        font-weight: normal;
+    }
 }
 body a{
     font-size: 14px;
     color: #202020;
+}
+body p{
+    line-height: 18px;
 }
 /*Site İkon*/
     [class*="icon-"], .icon {
@@ -84,4 +90,12 @@ body a{
     fill: currentColor;
     vertical-align: middle;
     font-size: 32px;
+}
+img{
+    width: 100%;
+}
+p strong{
+    font-weight: normal;
+    font-family: $bold;
+    color: $colorDefault;
 }

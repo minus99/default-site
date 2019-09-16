@@ -103,6 +103,11 @@ Site General Flex Class Items
     border-color: $colorRed;
     background-color: $errorBgColor;
 }
+//Site genel mesaj hatali gorunum
+.message-success{
+    background-color: $sucessBgColor;
+    border-color: $sucessBorder;
+}
 //Genel kontrol icin eger eleman bos ise class veriliyor
 .is-empty{
     &:empty{
@@ -119,4 +124,12 @@ Site General Flex Class Items
     top: 0;
     left: 0;
     right: 0;
+}
+//Genel sistem tablelarinda inline css var table'in tam yayilmasi icin css ile eziliyor
+table[style*="inline"]{
+    display: table!important;
+}
+//Arka plan beyaz olması icin
+.white-thema{
+    background: $colorWhite;
 }

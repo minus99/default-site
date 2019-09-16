@@ -15,7 +15,8 @@
         text-align: center;
         position: relative;
         > a{
-            display: block;
+            display: inline-block;
+            position: relative;
         }
         &:after{
             content:'';
@@ -40,6 +41,24 @@
             color: $stepTextColorNormal;
             opacity: .4;
             font-size: $siteFontSize;
+        }
+        .icon-step-check{
+            display: none;
+            font-size: $fontSize14;
+            position: absolute;
+            top: 0;
+            left:calc(100% - 24px);
+        }
+        &.previous-activeted{
+            .icon{
+                fill-opacity: 1;
+            }
+            .step-txt{
+                opacity: 1;
+            }
+            .icon-step-check{
+                display: block;
+            }
         }
     }
     .tabBtnSelectedDefault{

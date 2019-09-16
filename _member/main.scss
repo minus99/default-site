@@ -1,11 +1,14 @@
 // --- FORM DÜZENLEMLERİ -- //
-
 // Global form ayarları
 input, textarea, select,
-.sStylerWrp_select .sStylerWrp {
-    width: 100%;
-    display: inline-block;
-    vertical-align: middle;
+.sStylerWrp_select .sStylerWrp, .dropdown-header {
+    width: 100% !important;
+    min-height: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    //vertical-align: middle;
     -webkit-appearance: none;
     border: 0;
     outline: 0;
@@ -19,12 +22,19 @@ input, textarea, select,
     padding: $formSelectedPadding;
     border-radius: $formInputRadius;
 }
-//Styler icin inptlar gizleniyor
+
+//Select stil
+select {
+    background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj4KICAgIDxwYXRoIGZpbGw9IiMyMDIwMjAiIGZpbGwtcnVsZT0ibm9uemVybyIgZD0iTTExLjk1NCAxNC45NjZsNC4zNzQgNCA0LjM3Mi00eiIvPgo8L3N2Zz4K) right no-repeat;;
+}
+
+
+
+//Styler icin inputlar gizleniyor
 .sStylerWrp_checkbox input, .sStylerWrp_radio input {
     display: none !important;
 }
-
-// Dropdown stil
+// Dropdown select stil
 .sStylerWrp_select.sStylerMainWrp {
     position: relative;
     display: block;
@@ -38,7 +48,7 @@ input, textarea, select,
     bottom: 0;
     opacity: 0;
     height: 100%;
-    width: 100%;
+    width: 100% !important;
 }
 .sStylerWrp_select {
     .icon-select {
@@ -52,6 +62,90 @@ input, textarea, select,
     }
 }
 
+
+// Dropdown genel düzen
+.dropdown {
+    position: relative;
+    user-select: none;
+    &-header {
+        padding-right: 40px;
+        line-height: $memberLineHeight;
+        cursor: default;
+        > * {
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+            overflow: auto;
+            cursor: default;
+            &::-webkit-scrollbar {
+                display:none;
+            }
+            > img {
+                margin-right: 7px;
+            }
+        }
+        &::after {
+            content: '';
+            //background: url('/images/frontend/menu-arrow.svg');
+            background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj4KICAgIDxwYXRoIGZpbGw9IiMyMDIwMjAiIGZpbGwtcnVsZT0ibm9uemVybyIgZD0iTTExLjk1NCAxNC45NjZsNC4zNzQgNCA0LjM3Mi00eiIvPgo8L3N2Zz4K);
+            width:32px;
+            height: 32px;
+            position: absolute;
+            right: 0px;
+            top: 50%;
+            transform: translateY(-50%); 
+            display: inline-block; 
+            transition: all .2s ease;
+            -webkit-transition: all .2s ease;
+            -o-transition: all .2s ease;
+        }
+    }
+    > ul {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        z-index: 1;
+        width: 100%;
+        max-height: 140px;
+        overflow: auto;
+        margin: -1px 0 0 0;
+        background: $memberLightGreyColor;
+        > li {
+            > a {
+                display: flex;
+                align-items: center;
+                white-space: nowrap;
+                overflow: auto;
+                padding: 0 10px !important;
+                line-height: $memberLineHeight;
+                font-family: $memberFontRegular;
+                font-size: 15px;
+                color: $memberDarkColor;
+                font-weight: 400;
+                letter-spacing: .7px;
+                cursor: default;
+                &::-webkit-scrollbar {
+                    display:none;
+                }
+                > img {
+                    margin-right: 7px;
+                }
+                &:hover {
+                    background: $memberGreyColor;
+                    color: $memberDarkColor;
+                }
+            }
+        }
+    }
+    &.opened {
+        > ul {
+            display: block;
+        }
+    }
+}
+
+
 // Checkbox stil
 .sStylerWrp_checkbox,
 .sStylerWrp_radio {
@@ -59,6 +153,7 @@ input, textarea, select,
     vertical-align: -0.8em;
     margin-right: 5px;
     user-select: none; 
+    cursor: pointer;
     > span {
         display: block;
         svg {
@@ -77,13 +172,11 @@ input, textarea, select,
             }
         }
     }
-    input[type=checkbox] {
-        display: none !important;
-    }
 }
 
 // Input metin stil
 .field {
+    flex: none;
     &.text {
         input {width:100%;}
     }
@@ -98,29 +191,42 @@ input, textarea, select,
     }
     &.field-single {
         grid-column: span 2; 
-        margin-bottom: $checkboxMarginBottom;
+        margin-bottom: $memberMargin5;
+        padding-right: 0 !important; 
         .form-obj {
             margin-bottom: 0px;
         }
     }
-    input[type=checkbox] {
-        display: none;
-    }
     &.field-submit, &.cancel  {margin-bottom: 0;}
+    
+    // Zorunlu alan stilleri
+    &.form-err {
+        .form-label {
+            color: $memberRedColor;
+        }
+        .form-obj {
+            input, textarea, select, .sStylerWrp_select .sStylerWrp, .dropdown-header {
+                border-color: $memberRedColor;
+            }
+        }
+    }
 }
-
 .form-label {
-    span {
+    font-size: $labelFontSize;
+    color: $labelFontColor;
+    font-family: $labelFontFamily;  
+    line-height: $labelLineHeight;
+    /*span {
         font-size: $labelFontSize;
         color: $labelFontColor;
         font-family: $labelFontFamily;  
         line-height: $labelLineHeight;
-    }
+    }*/
 }
-
 .form-obj {
     margin-bottom: $formBottomMargin;
     input {
+        width: 100% !important;
         line-height: $formInputHeight;
         color: $formInputColor;
         font-family: $formInputFamily;
@@ -133,57 +239,140 @@ input, textarea, select,
     &:empty {display:none;}
 }
 
-// Üyelik bilgileri açıklama metni
-.page-top-desc {
-    margin-bottom: $descriptionBottomMargin;
+.pages-member {
+    input[type=checkbox], input[type=radio] {
+        display: none !important;   
+    }
 }
 
-span[id$="lbfGNL_KAYITYOK"] { 
-    margin-bottom: $notFoundBottomMargin;
-    display: block;
-    color: $colorRed;
+// Gri arkaplan input ve select Stil
+.select-gray {
+    input, textarea, select, .sStylerWrp_select .sStylerWrp, .dropdown-header {
+        background: $memberLightGreyColor;
+        border-color: $memberLightGreyColor;
+    }
+}
+
+// Zorunlu alan
+.zorunluFont:before {
+    content: "*";
+    margin-right: 2px;
 }
 
 // datepicker
 #ui-datepicker-div {display: none;}
 
-// Üyelik genel sayfa yapısı
+// --- ÜYELİK AÇIKLAMA -- //
+// Üyelik bilgileri açıklama metni
+.page-top-desc {
+    margin-bottom: $memberMargin20;
+}
+span[id$="lbfGNL_KAYITYOK"] { 
+    margin-bottom: $memberFontSize20;
+    display: block;
+    color: $colorRed;
+}
+
+
+// --- ÜYELİK SAYFASI GENEL YAPI -- //
 .member-grid{
     //Üyelik sayfası arka plan rengi -- Opsiyonel
     background:$memberPageBg;
-    padding: $memberPagePadding;
+    padding: $memberMarginReset;
     .member-general {
-        padding: $padding15;
+        padding: $memberPadding20 $memberPadding15;
         background: $colorWhite; 
         border-radius: 0;
     } 
     .page-top-title {
         font-size: $fontSize20;
         font-family: $medium;
-        margin-bottom: $memberTitleMarginBottom;
+        margin-bottom: $memberMargin20;
         color: $colorDefault;
     }
 }
 
-/* Member Alternatif Button */
-
-a.btnSipariseDon {
-    margin-left: $sipShoppingMarginLeft;
-    margin-top: $sipShoppingMarginTop;
+// --- ÜYELİK SAYFASI BUTTON DÜZENLEMLERİ -- //
+// Member Alternatif Button
+.member-back {
+    margin-left: $memberMargin20;
+    margin-top: $memberMargin20;
 }
 
-a.btnSipariseDon, a.btnSipIptal {
-    background: none;
+//Text Button
+a.btnSipariseDon, a.btnSipIptal, a.btnSipIade, 
+a.btnFavoriListeSil, a.btnFavSepeteAt, a.btnFavoriSil, 
+a.btnIadeDetay, a.btnTakipListeFiySil, a.btnTakipListeStokSil, 
+a.btnAbonelikDon, a.btnAbuIptalEt, a.btnAbuGuncelle {
+    background: none; 
     width: auto;
     padding: 0; 
     span {
-        color: $sipDetailBackBtnColor; 
-        font-size: $sipDetailBackBtnSize;
-        font-family: $sipDetailBackBtnFont;
+        color: $memberGreyColor; 
+        font-size: $memberFontSize14;
+        font-family: $memberFontRegular;
         @extend .display-flex;
         align-items: center;  
     } 
 }
+
+// Border Button
+a.btnSepeteAtFavori, .follow-list-btn, a.lnkSatinAl { 
+    background: none;
+    border: 2px solid $memberBlueColor;
+    border-radius: $memberBorderRadius3;
+    padding: $memberBtnDefaultPaddingSmall;
+    text-align: center;
+    display: block; 
+    span {
+        color: $memberBlueColor;
+        font-family: $memberFontBold;
+    }
+    &.selected {
+        background: $memberBlueColor;
+        span {
+            color: #fff;
+        }
+    }
+}
+
+// Üyelik sayfaları alt buttonlar
+
+a.btnTakipListeStokTumSil, a.btnTakipListeFiyTumSil, a.btnSifreGuncelle, a.btnUyeBilgi, a.btnTavsiyeGonder, a.btnMesajGonder {
+    display: inline-block;
+    width: auto;
+    padding: $memberBtnDefaultPaddingSmall; 
+}
+
+// Member Genel Button
+a.lnkSorgula, .urunDetay_btnSepeteAt a.btnsepeteAt {
+    display: block;
+    width: 100%;
+    background: $btnBackground; 
+    border-radius: $buttonRadius;
+    text-align: center;
+    padding: $memberBtnDefaultPadding;
+    > span{
+        font-family: $memberFontBold;
+        color: $colorWhite;
+        font-size: $memberFontSize14;
+        font-weight: normal;
+    }
+}
+
+// --- EMS TAB DÜZENLEMLERİ -- //
+// Tab Menü
+.ems-tab {
+    .ems-tab-content {
+        .report-holder {
+            display: none;
+            &.selected {
+                display: block;
+            }
+        }
+    }
+}
+
 
 
 

@@ -1,7 +1,8 @@
 //Siparis ozet ızgara
 .order-summary{
     background: $orderSummaryBg;
-    padding: $orderSummaryPadding;
+    padding: $orderSummaryPadding $orderSummaryPadding $orderSummaryBttmPadding $orderSummaryPadding;
+    margin-top: $orderSummaryMbTopSpc;
 
     //Siparis ozet baslik
     .mn-20 > span{
@@ -20,6 +21,8 @@
     //Sepet satin alma avantaj ikonları
     &-benefit{
         flex-wrap: wrap;
+        margin-top: 15px;
+        margin-bottom: 10px;
         li{
             width: 50%;
             text-align: $alignCenter;
@@ -66,6 +69,16 @@
         //Label ust bosluk
         .coupon-lbl{
             margin-top: $couponLblTopSpc;
+            background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj4gICAgPGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg2IDYpIj4gICAgICAgIDxjaXJjbGUgY3g9IjEwLjUiIGN5PSIxMC41IiByPSIxMC41IiBzdHJva2U9IiM2OTZCNzEiLz4gICAgICAgIDxwYXRoIGZpbGw9IiM2OTZCNzEiIGQ9Ik03IDEwaDd2MUg3eiIvPiAgICAgICAgPHBhdGggZmlsbD0iIzY5NkI3MSIgZD0iTTExIDd2N2gtMVY3eiIvPiAgICA8L2c+PC9zdmc+");
+            background-repeat: no-repeat;
+            background-position: center left;
+            padding-left: 40px;
+            width: max-content;
+            cursor: pointer;
+        }
+        //Kupon kodu il gorunum de gizleniyor
+        .coupon-enter{
+            display: none;
         }
         .form-label{
             //Bos ise gizleniyor
@@ -95,6 +108,7 @@
                 max-width: $couponInputMaxWidth;
             }   
         }
+
     }
     //Kupon iptal metni icin ozellestirme
     .coupon-cancel{
@@ -102,6 +116,49 @@
             color: $colorAlternate;
             line-height: $gridLineHghtDefault;
         }
+    }
+    //Kupon kodu aktif ediliyor
+    &.opened{
+        .coupon-lbl{
+            background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj4gICAgPGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg2IDYpIj4gICAgICAgIDxjaXJjbGUgY3g9IjEwLjUiIGN5PSIxMC41IiByPSIxMC41IiBzdHJva2U9IiM2OTZCNzEiLz4gICAgICAgIDxwYXRoIGZpbGw9IiM2OTZCNzEiIGQ9Ik03IDEwaDd2MUg3eiIvPiAgICA8L2c+PC9zdmc+");
+        }
+        .cart-coupon {
+            .coupon-enter{
+                display: block;
+            }
+        }
+    }
+    //Kupon kodu gelmis ise label gizleniyor
+    &.hidden{
+        .coupon-lbl{
+            display: none;
+        }
+    }
+    span[id$="lblHCK_HATA"]{
+        &:empty{display: none;}
+        padding: 10px;
+        display: block;
+        font-size: $fontSize12;
+        color: $colorAlternate;
+    }
+}
+
+//Sepet satin al butonlari mobile
+.basket-grid .next,
+.basket-grid-2 .next {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+    padding-left: 2.5px;
+    padding-right: 2.5px;
+    padding-bottom: 5px;
+    background: $colorWhite;
+    > a.btnDefault{
+        min-width: calc(50% - 5px);
+        margin-left: 2.5px;
+        margin-right: 2.5px;
     }
 }
 
@@ -149,4 +206,30 @@
             }
         }
     }   
+}
+
+//Odeme sayfasi hesap ozeti
+.order-payment{
+    .order-summary{
+        padding-bottom: $orderSummaryPadding;
+    }
+}
+
+//Odeme sayfasi satin al buton
+.basket-grid-2{
+    .next-3{
+        position: relative;
+        z-index: inherit;
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 0;
+        > a.btnDefault{
+            min-width: 100%;
+            margin-left: 0;
+            margin-right: 0;
+            &:nth-child(3){
+                margin-top: 10px;
+            }
+        }   
+    }
 }

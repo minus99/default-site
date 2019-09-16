@@ -3,17 +3,20 @@
 // Üye sayfası sol menü
 .member-menu {
     background: $colorWhite;
-    border-radius: $memberCornerRadius; 
+    border-radius: $memberBorderRadius4; 
 }
 
 // Üye sayfası kullanıcı bilgisi
 .member-user {
-    padding: $padding20;
+    padding: $memberPadding20;
     &-icon {
         width: 70px; 
         height: 70px;
         background: $userIcoBg;
         border-radius: $borderRadius;
+        img {
+            width: auto;
+        }
     }
     &-text {
       a {

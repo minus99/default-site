@@ -1,19 +1,9 @@
-//Ana ızgara
+// --- ÜYELİK HESABIM -- //
 .member-grid { 
-    grid-template-columns: minmax(0, 3%) minmax(0, 410px) minmax(0, 1fr) minmax(0, 3%);
-    grid-template-areas: ". AAA BBB .";
+    grid-template-columns: minmax(0,5%) minmax(0,25%) minmax(0,75%) minmax(0,5%);
+    grid-template-areas: ". AAA BBB ."; 
+    column-gap: 30px;
+    padding: $memberPadding30 $memberMarginReset
 }
 
-//Uye sol menuye ayar cekiyoruz :)
-.pages-member{
-    &-left{
-        margin-right: 30px;
-    }
-}
-//Uye bilgi Form
-.member-info {
-    .form{
-        max-width: 680px;
-        margin-right: auto;
-    }
-}
+
