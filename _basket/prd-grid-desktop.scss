@@ -60,9 +60,13 @@
     }
 }
 
-//Sepet adimlari sepet onizleme grid yapisi
+//odeme sepet onizleme grid yapisi
 .basket-grid-2{
     .grid-table-cart{
+        .grid-table-rows{
+            padding-left: 0;
+            padding-right: 0;
+        }
         .grid-table-row{
             //Sepet tablo row padding resetleniyor
             padding: 15px 0;

@@ -83,6 +83,11 @@
 @import '_service-list/variables';
 @import '_service-list/main';
 
+//-----Blog-----//
+@import '_blog/variables'; 
+@import '_blog/blog-page'; 
+
+
 
 @supports(grid-area: auto) {
     @media screen and (min-width: $breakpoint-default) {
@@ -140,9 +145,12 @@
         @import '_corporate/corporate-menu-desktop';
         @import '_corporate/corporate-page-desktop';
 
-        
 
         //-----Service Page-----//
         @import '_service-list/main-desktop';
+
+        //-----Blog-----//
+        @import '_blog/blog-page-desktop';  
+
     }
 }

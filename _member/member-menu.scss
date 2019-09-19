@@ -38,7 +38,7 @@
         a {
             display: block;
         }
-        &.selected {
+        &.selected, &.act { 
             a {
                 color: $btnAlternateColor;
                 border-bottom: 2px solid $btnAlternateColor;

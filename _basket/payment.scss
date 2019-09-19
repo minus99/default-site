@@ -130,7 +130,9 @@ div[id$="pnlKrediKartiBilgi"],
 .pageOdemeBilgi_odemeTaksit{
     display: block !important;
 }
+//Banka bonus kullanim
 .pageOdemeBilgi_chkBankaBonus{
+    margin-top: 15px;
     .ftpPuanKazan{
         display: none;
     }
@@ -205,17 +207,23 @@ a.btnBankaPromosyonUygula,
                                     &.bankaKampanyaMetinHavale{
                                         display: none !important;
                                     }
-                                    &.banka{
-                                        width: 50%;
-                                    }
                                     &.logo{
-                                        width: 20%;
+                                        width: 25%;
                                         img{
                                             max-width: 166px;
                                         }
                                     }
+                                    &.banka{
+                                        width: 45%;
+                                    }
                                     &.link{
                                         width: 30%;
+                                        padding-right: 20px;
+                                        a.btnDefault {
+                                            > span{
+                                                justify-content: flex-end;
+                                            }
+                                        }
                                     }
                                     span.hesapNo{
                                         @extend .display-block;
