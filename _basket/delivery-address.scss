@@ -1,3 +1,12 @@
+//Teslimat Adres yok
+.address-none{
+    > span{
+        @extend .message;
+        @extend .message-error;
+        margin-left: $addressNoneMargin;
+        margin-right: $addressNoneMargin;
+    }
+}
 //Teslimat adres grid row
 .grid-table-address{
     background: $colorWhite;

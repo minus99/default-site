@@ -393,6 +393,10 @@ a.btnBankaPromosyonUygula,
     //Odeme sepet onizleme
     &-left-content{
         @extend .scroll-webkit;
+        .grid-table-cart{
+            max-height: 230px;
+            overflow: hidden;
+        }
     }
     //Odeme teslimat adres bilgileri
     &-right-content{
