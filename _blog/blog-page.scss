@@ -18,7 +18,7 @@
             display: -ms-grid;   
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(0,50%) minmax(0,25%) minmax(0,25%));     
-            grid-gap: 20px; 
+            grid-gap: 30px; 
             .icerikListe {height: 100%;}
             tr:nth-child(1) {
                 grid-row: 15 span;
@@ -28,6 +28,7 @@
                     width: 100%;
                     display: inline-block;
                     .image-wrap {
+                        height: 100vh;
                         a {
                             height: 100vh;
                         }
@@ -75,4 +76,41 @@
         display:none;
     }
 
+}
+
+//--- BLOG MENÜ ---//
+
+.menu-blog {
+    position: relative;
+    .swiper-inner {overflow: visible;}
+    .swiper-slide {
+        width: auto;
+        position: static;
+        > a {
+            background: $contentTabColor;
+            color: $contentDarkColor;
+            font-size: $contentFontSize16;
+            padding: $contentMessageTabBtnPadding;
+            border-radius: 4px 4px 0 0;
+            font-family: $contentFontMedium;
+            display: block;
+            width: 100%;
+        }
+        &.selected {
+            a {
+                background: #fff;
+                border-radius: 4px 4px 0 0;
+                display: block;
+                padding: $contentMessageTabBtnPadding;
+            }
+            .lvl-2 {display: block;}
+        }
+    }
+    .lvl-2 {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 50px;
+        width: 100%;
+    }
 }
